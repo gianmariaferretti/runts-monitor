@@ -1,0 +1,42 @@
+{
+  "enti": [
+    { "numero_repertorio": "93062320424", "nome": "Ente 1" },
+    { "numero_repertorio": "93111670662", "nome": "Ente 2" },
+    { "numero_repertorio": "92036200514", "nome": "Ente 3" },
+    { "numero_repertorio": "92042840055", "nome": "Ente 4" },
+    { "numero_repertorio": "92020480627", "nome": "Ente 5" },
+    { "numero_repertorio": "95186450169", "nome": "Ente 6" },
+    { "numero_repertorio": "90057120025", "nome": "Ente 7" },
+    { "numero_repertorio": "92017850378", "nome": "Ente 8" },
+    { "numero_repertorio": "98007270782", "nome": "Ente 9" },
+    { "numero_repertorio": "93037790875", "nome": "Ente 10" },
+    { "numero_repertorio": "97015130798", "nome": "Ente 11" },
+    { "numero_repertorio": "94177950485", "nome": "Ente 12" },
+    { "numero_repertorio": "95068380104", "nome": "Ente 13" },
+    { "numero_repertorio": "91000430594", "nome": "Ente 14" },
+    { "numero_repertorio": "93012430752", "nome": "Ente 15" },
+    { "numero_repertorio": "92531620158", "nome": "Ente 16" },
+    { "numero_repertorio": "80013980463", "nome": "Ente 17" },
+    { "numero_repertorio": "1424190435", "nome": "Ente 18" },
+    { "numero_repertorio": "3103400366", "nome": "Ente 19" },
+    { "numero_repertorio": "80008130546", "nome": "Ente 20" },
+    { "numero_repertorio": "91033340331", "nome": "Ente 21" },
+    { "numero_repertorio": "97509140014", "nome": "Ente 22" },
+    { "numero_repertorio": "91173280354", "nome": "Ente 23" },
+    { "numero_repertorio": "92041680908", "nome": "Ente 24" },
+    { "numero_repertorio": "97194070823", "nome": "Ente 25" },
+    { "numero_repertorio": "92075490521", "nome": "Ente 26" },
+    { "numero_repertorio": "93035600894", "nome": "Ente 27" },
+    { "numero_repertorio": "80029110261", "nome": "Ente 28" },
+    { "numero_repertorio": "94033170302", "nome": "Ente 29" },
+    { "numero_repertorio": "2707951204", "nome": "Ente 30" },
+    { "numero_repertorio": "95032770125", "nome": "Ente 31" },
+    { "numero_repertorio": "94005260271", "nome": "Ente 32" },
+    { "numero_repertorio": "94014660024", "nome": "Ente 33" },
+    { "numero_repertorio": "95101640241", "nome": "Ente 34" },
+    { "numero_repertorio": "90093450568", "nome": "Ente 35" }
+  ],
+  "notifiche": {
+    "email": "gianmaria.ferretti@e-ius.it"
+  }
+}

@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 # Percorsi dei file
 CONFIG_FILE = 'config.json'
 DATA_DIR = 'data'
-HISTORY_FILE = f"{DATA_DIR}/history.json"
+HISTORY_FILE = f"{DATA_DIR}/documents_history.json"
 
 # Assicuriamoci che la directory data esista
 if not os.path.exists(DATA_DIR):
@@ -32,7 +32,7 @@ def load_config():
         return json.load(f)
 
 def load_history():
-    """Carica lo storico dei dati degli enti"""
+    """Carica lo storico dei documenti degli enti"""
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, 'r') as f:
             return json.load(f)
@@ -43,62 +43,11 @@ def save_history(history):
     with open(HISTORY_FILE, 'w') as f:
         json.dump(history, f, indent=2)
 
-def extract_text(soup, label_text):
-    """Estrae testo da un elemento trovato con il selettore CSS"""
-    try:
-        # Cerca elementi strong che contengono il testo
-        element = soup.find('strong', string=lambda x: x and label_text in x)
-        if element and element.find_next_sibling():
-            return element.find_next_sibling().get_text(strip=True)
-            
-        # Cerca anche con una stringa diretta
-        element = soup.find(string=lambda x: x and label_text in x)
-        if element and element.find_parent() and element.find_parent().find_next_sibling():
-            return element.find_parent().find_next_sibling().get_text(strip=True)
-            
-        return None
-    except Exception as e:
-        logger.error(f"Errore nell'estrazione di {label_text}: {e}")
-        return None
-
-def extract_person_data(soup, person_num):
-    """Estrae i dati di una persona specifica"""
-    try:
-        # Cerca sezioni che contengono "Persona X"
-        person_section = soup.find(string=lambda x: x and f"Persona {person_num}" in x)
-        if not person_section:
-            return {}
-
-        # Trova il container della persona
-        person_container = person_section.find_parent('div')
-        if not person_container:
-            return {}
-
-        # Estrai i dati della persona
-        person_data = {
-            'tipo': extract_text(soup, 'Tipo'),
-            'rappresentante_legale': extract_text(soup, 'Rappresentante legale'),
-            'codice_fiscale': extract_text(soup, 'Codice fiscale'),
-            'nome': extract_text(soup, 'Nome'),
-            'cognome': extract_text(soup, 'Cognome'),
-            'data_nascita': extract_text(soup, 'Data di nascita'),
-            'provincia': extract_text(soup, 'Provincia'),
-            'comune': extract_text(soup, 'Comune'),
-            'carica': extract_text(soup, 'Carica'),
-            'data_nomina': extract_text(soup, 'Data nomina')
-        }
-        
-        # Rimuovi i valori None
-        return {k: v for k, v in person_data.items() if v is not None}
-    except Exception as e:
-        logger.error(f"Errore nell'estrazione di Persona {person_num}: {e}")
-        return {}
-
 def extract_documents(soup):
     """Estrae l'elenco dei documenti con particolare attenzione ai bilanci"""
     documents = []
     try:
-        # Approccio 1: Cerca la sezione "Atti e documenti" come titolo
+        # Cerca la sezione "Atti e documenti"
         docs_section = None
         
         # Metodi multipli per trovare la sezione documenti
@@ -123,7 +72,7 @@ def extract_documents(soup):
         for selector in selectors:
             docs_section = selector(soup)
             if docs_section:
-                logger.info(f"Trovata sezione documenti con selettore: {selector.__name__ if hasattr(selector, '__name__') else str(selector)}")
+                logger.info(f"Trovata sezione documenti")
                 break
         
         # Se abbiamo trovato una sezione testo (non una tabella), dobbiamo trovare la tabella associata
@@ -163,7 +112,6 @@ def extract_documents(soup):
             # Verifica che questa sembri essere una tabella di documenti
             if not any(keyword in ' '.join(headers) for keyword in 
                       ['documento', 'file', 'pratica', 'codice', 'allegato', 'data']):
-                logger.debug("Tabella non sembra contenere documenti")
                 continue
             
             # Mappa le colonne
@@ -236,18 +184,15 @@ def extract_documents(soup):
     
     return documents
 
-async def search_entity(page, codice_fiscale):
-    """Cerca un ente usando Playwright"""
-    logger.info(f"Ricerca dell'ente con codice fiscale: {codice_fiscale}")
+async def extract_entity_documents(page, codice_fiscale, nome_ente):
+    """Estrae solo i documenti di un ente (versione ottimizzata)"""
+    logger.info(f"Ricerca documenti per l'ente {nome_ente} ({codice_fiscale})")
     
-    # Creiamo il contenitore per i dati risultato
+    # Creiamo il contenitore per i dati risultato (solo documenti e info minimali)
     entity_data = {
         "data_controllo": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "codice_fiscale": codice_fiscale,
-        "dati_base": {},
-        "dati_ente": {},
-        "sede_legale": {},
-        "persone": [],
+        "nome": nome_ente,
         "documenti": []
     }
     
@@ -265,13 +210,11 @@ async def search_entity(page, codice_fiscale):
                 cookie_button = await page.query_selector(cookie_selector)
                 if cookie_button:
                     await cookie_button.click()
-                    logger.info(f"Popup cookie accettato con selettore: {cookie_selector}")
                     break
-        except Exception as e:
-            logger.info(f"Popup cookie non trovato o già accettato: {e}")
+        except Exception:
+            pass
         
         # Inserisci il codice fiscale nel campo appropriato
-        # Prova diversi selettori per il campo
         filled = False
         for selector in ["#CodiceFiscale", "#dnn_ctr446_View_txtCodiceFiscale", "input[id*='CodiceFiscale']"]:
             try:
@@ -279,13 +222,11 @@ async def search_entity(page, codice_fiscale):
                 if input_field:
                     await input_field.fill(codice_fiscale)
                     filled = True
-                    logger.info(f"Campo codice fiscale compilato con selettore: {selector}")
                     break
             except Exception:
                 continue
         
         if not filled:
-            logger.warning("Impossibile trovare il campo del codice fiscale")
             # Prova un approccio più generico con JavaScript
             try:
                 await page.evaluate("""() => {
@@ -294,9 +235,8 @@ async def search_entity(page, codice_fiscale):
                     if (cfInput) cfInput.value = arguments[0];
                 }""", codice_fiscale)
                 filled = True
-                logger.info("Campo codice fiscale compilato tramite JavaScript")
             except Exception as e:
-                logger.error(f"Errore anche con JavaScript: {e}")
+                logger.error(f"Errore nella compilazione del campo: {e}")
                 return entity_data
         
         # Clicca sul pulsante CERCA
@@ -307,14 +247,12 @@ async def search_entity(page, codice_fiscale):
                 if search_button:
                     await search_button.click()
                     clicked = True
-                    logger.info(f"Pulsante CERCA cliccato con selettore: {selector}")
                     await page.wait_for_load_state("networkidle", timeout=15000)
                     break
             except Exception:
                 continue
         
         if not clicked:
-            logger.warning("Impossibile trovare il pulsante CERCA, provo con JavaScript")
             try:
                 await page.evaluate("""() => {
                     const buttons = Array.from(document.querySelectorAll('button, input[type="submit"]'));
@@ -322,10 +260,9 @@ async def search_entity(page, codice_fiscale):
                     if (searchBtn) searchBtn.click();
                 }""")
                 clicked = True
-                logger.info("Pulsante CERCA cliccato tramite JavaScript")
                 await page.wait_for_load_state("networkidle", timeout=15000)
             except Exception as e:
-                logger.error(f"Errore nel cliccare con JavaScript: {e}")
+                logger.error(f"Errore nel cliccare il pulsante: {e}")
                 return entity_data
         
         # Attendi che i risultati della ricerca siano caricati
@@ -334,27 +271,8 @@ async def search_entity(page, codice_fiscale):
         # Verifica se ci sono risultati
         page_content = await page.content()
         if "Nessun risultato trovato" in page_content:
-            logger.warning(f"Nessun risultato trovato per il codice fiscale: {codice_fiscale}")
+            logger.warning(f"Nessun risultato trovato per {codice_fiscale}")
             return entity_data
-        
-        # Controlla se c'è una tabella di risultati
-        table = await page.query_selector("table")
-        if not table:
-            logger.warning(f"Nessuna tabella di risultati trovata per il codice fiscale: {codice_fiscale}")
-            return entity_data
-        
-        # Estrai i dati di base dalla tabella
-        rows = await table.query_selector_all("tr")
-        if len(rows) > 1:
-            row = rows[1]
-            cells = await row.query_selector_all("td")
-            if len(cells) >= 3:
-                entity_data["dati_base"] = {
-                    "denominazione": await cells[0].inner_text(),
-                    "comune": await cells[1].inner_text(),
-                    "sezione": await cells[2].inner_text()
-                }
-                logger.info(f"Dati base estratti: {entity_data['dati_base']}")
         
         # Clicca sul pulsante Dettaglio
         dettaglio_clicked = False
@@ -364,13 +282,11 @@ async def search_entity(page, codice_fiscale):
                 if dettaglio_button:
                     await dettaglio_button.click()
                     dettaglio_clicked = True
-                    logger.info(f"Pulsante DETTAGLIO cliccato con selettore: {selector}")
                     break
             except Exception:
                 continue
         
         if not dettaglio_clicked:
-            logger.warning("Impossibile trovare il pulsante DETTAGLIO, provo con JavaScript")
             try:
                 await page.evaluate("""() => {
                     const links = Array.from(document.querySelectorAll('a, input, button'));
@@ -378,84 +294,65 @@ async def search_entity(page, codice_fiscale):
                     if (detailLink) detailLink.click();
                 }""")
                 dettaglio_clicked = True
-                logger.info("Pulsante DETTAGLIO cliccato tramite JavaScript")
             except Exception as e:
-                logger.error(f"Errore nel cliccare DETTAGLIO con JavaScript: {e}")
+                logger.error(f"Errore nel cliccare DETTAGLIO: {e}")
                 return entity_data
         
-        # Aspetta che la pagina di dettaglio carichi completamente
-        # NON aspettiamo elementi h1/h2 visibili (che potrebbero essere nascosti)
-        # ma aspettiamo che la navigazione sia completa
+        # Aspetta che la pagina di dettaglio carichi
         await page.wait_for_load_state("networkidle", timeout=20000)
-        await asyncio.sleep(5)  # Pausa per assicurarci che la pagina sia completamente renderizzata
+        await asyncio.sleep(5)
         
-        # Verifica che siamo nella pagina di dettaglio controllando l'URL
-        current_url = page.url
-        if "Ente" in current_url or "Dettaglio" in current_url:
-            logger.info(f"Siamo nella pagina di dettaglio: {current_url}")
-        else:
-            logger.warning(f"URL inaspettato, potremmo non essere nella pagina di dettaglio: {current_url}")
-        
-        # Estrai tutti i dati dalla pagina
+        # Estrai solo i documenti dalla pagina (ottimizzazione)
         content = await page.content()
         soup = BeautifulSoup(content, "html.parser")
         
-        # Dati ente
-        title_text = None
-        title_elements = soup.select(".ente_titolo-xl, .titolo-ente, h2:not([style*='display: none']), h3")
-        if title_elements:
-            title_text = title_elements[0].get_text(strip=True)
-            entity_data["dati_ente"]["denominazione"] = title_text
-            logger.info(f"Trovato titolo ente: {title_text}")
-        
-        # Estrai altri dati dell'ente
-        for field, labels in {
-            "repertorio": ["Repertorio"],
-            "codice_fiscale": ["Codice fiscale"],
-            "data_iscrizione": ["Iscritto il"],
-            "sezione": ["Sezione"],
-            "forma_giuridica": ["Forma Giuridica"],
-            "email_pec": ["Email PEC"],
-            "atto_costitutivo": ["Atto costitutivo"]
-        }.items():
-            for label in labels:
-                value = extract_text(soup, label)
-                if value:
-                    entity_data["dati_ente"][field] = value
-                    break
-        
-        # Sede legale
-        for field, label in {
-            "stato": "Stato",
-            "provincia": "Provincia",
-            "comune": "Comune",
-            "indirizzo": "Indirizzo",
-            "civico": "Civico",
-            "cap": "CAP"
-        }.items():
-            value = extract_text(soup, label)
-            if value:
-                entity_data["sede_legale"][field] = value
-        
-        # Estrai dati delle persone (fino a 10 persone)
-        for i in range(1, 11):
-            person_data = extract_person_data(soup, i)
-            if person_data:
-                entity_data["persone"].append(person_data)
-                logger.info(f"Estratti dati della persona {i}")
-        
-        # Estrai documenti
+        # Estrai documenti (questa è l'unica parte che ci interessa)
         entity_data["documenti"] = extract_documents(soup)
-        logger.info(f"Estratti {len(entity_data['documenti'])} documenti")
+        logger.info(f"Estratti {len(entity_data['documenti'])} documenti per {nome_ente}")
         
         return entity_data
         
     except Exception as e:
-        logger.error(f"Errore generale durante la ricerca dell'ente {codice_fiscale}: {e}")
+        logger.error(f"Errore durante l'estrazione documenti per {nome_ente}: {e}")
         return entity_data
 
+def compare_documents(old_data, new_data, nome_ente):
+    """Confronta solo i documenti tra i dati vecchi e nuovi dell'ente"""
+    changes = []
+    
+    # Ottieni documenti precedenti e attuali
+    old_docs = old_data.get("documenti", [])
+    new_docs = new_data.get("documenti", [])
+    
+    # Crea dizionari per il confronto rapido (usando tipo+codice+anno come chiave)
+    old_docs_dict = {f"{doc['tipo_documento']}_{doc['codice_pratica']}_{doc['anno']}": doc for doc in old_docs}
+    
+    # Cerca documenti nuovi
+    for doc in new_docs:
+        doc_key = f"{doc['tipo_documento']}_{doc['codice_pratica']}_{doc['anno']}"
+        
+        # Se questo documento non esisteva prima, è nuovo
+        if doc_key not in old_docs_dict:
+            # Personalizza il messaggio per i bilanci
+            if "BILANCIO" in doc["tipo_documento"].upper():
+                change_type = "Nuovo bilancio pubblicato"
+                value = f"Bilancio {doc['anno']} (codice: {doc['codice_pratica']})"
+            else:
+                change_type = "Nuovo documento pubblicato"
+                value = f"{doc['tipo_documento']} {doc['anno']} (codice: {doc['codice_pratica']})"
+            
+            changes.append({
+                "nome": nome_ente,
+                "codice_fiscale": new_data["codice_fiscale"],
+                "campo": change_type,
+                "valore_precedente": "N/A",
+                "valore_nuovo": value
+            })
+    
+    return changes
+
 def send_notification(changes):
-    """Invia una notifica email con le modifiche rilevate"""
+    """Invia una notifica email con i nuovi documenti"""
     config = load_config()
     recipient_email = config["notifiche"]["email"]
     
@@ -484,7 +381,7 @@ def send_notification(changes):
     num_entities = len(changes_by_entity)
     
     # Crea il messaggio email
-    subject = f"RUNTS Monitor: Modifiche rilevate per {num_entities} enti"
+    subject = f"RUNTS Monitor: Nuovi documenti per {num_entities} enti"
     
     # Prepara il contenuto dell'email
     email_content = f"""
@@ -505,19 +402,19 @@ def send_notification(changes):
     </head>
     <body>
         <div class="header">
-            <h1>Monitor RUNTS: Notifica Modifiche</h1>
+            <h1>Monitor RUNTS: Nuovi Documenti</h1>
             <p>Data: {datetime.now().strftime("%d/%m/%Y %H:%M")}</p>
         </div>
         
         <div class="summary">
             <h2>Riepilogo</h2>
-            <p>Sono state rilevate modifiche per <strong>{num_entities}</strong> enti nel Registro Unico Nazionale del Terzo Settore.</p>
+            <p>Sono stati rilevati nuovi documenti per <strong>{num_entities}</strong> enti nel Registro Unico Nazionale del Terzo Settore.</p>
     """
     
     # Aggiungi sezione nuovi bilanci se presenti
     if new_balances:
         email_content += """
-            <h3>Nuovi Bilanci Pubblicati:</h3>
+            <h3>⚠️ NUOVI BILANCI PUBBLICATI:</h3>
             <ul>
         """
         for entity, balances in new_balances.items():
@@ -533,55 +430,30 @@ def send_notification(changes):
         <div class="entity">
             <div class="entity-header">
                 <h2>{entity_name}</h2>
-                <p>Numero di modifiche rilevate: {len(entity_changes)}</p>
+                <p>Nuovi documenti rilevati: {len(entity_changes)}</p>
             </div>
         """
         
-        # Evidenzia i nuovi bilanci, se presenti
-        if entity_name in new_balances:
-            email_content += """
-            <div class="new-balance">
-                <h3>⚠️ NUOVI BILANCI PUBBLICATI</h3>
-                <ul>
-            """
-            for balance in new_balances[entity_name]:
-                email_content += f"<li><strong>{balance}</strong></li>"
-            email_content += """
-                </ul>
-            </div>
-            """
-        
-        # Tabella con le principali modifiche
+        # Tabella con tutti i nuovi documenti
         email_content += """
-            <h3>Principali modifiche</h3>
+            <h3>Documenti pubblicati</h3>
             <table>
                 <tr>
-                    <th>Campo</th>
-                    <th>Valore Precedente</th>
-                    <th>Nuovo Valore</th>
+                    <th>Tipo</th>
+                    <th>Dettagli</th>
                 </tr>
         """
         
-        # Aggiungi le modifiche più significative (limitiamo a 15 per non appesantire troppo l'email)
-        important_changes = [c for c in entity_changes if 
-                            not c['campo'].startswith('documenti') and 
-                            not c['campo'].startswith('persone') and
-                            c['campo'] != "Nuovo bilancio pubblicato"]
-        
-        significant_changes = important_changes[:15]
-        
-        for change in significant_changes:
+        for change in entity_changes:
             email_content += f"""
                 <tr>
                     <td>{change['campo']}</td>
-                    <td>{change['valore_precedente']}</td>
                     <td>{change['valore_nuovo']}</td>
                 </tr>
             """
         
         email_content += """
             </table>
-            <p><em>Nota: questa è una selezione delle modifiche più rilevanti. Per la lista completa, consultare l'issue su GitHub.</em></p>
         </div>
         """
     
@@ -607,70 +479,25 @@ def send_notification(changes):
     
     logger.info(f"Notifica salvata in {notification_file} per l'elaborazione da parte di GitHub Actions")
 
-def flatten_dict(d, prefix=''):
-    """Appiattisce un dizionario nidificato in una singola dimensione"""
-    items = []
-    for k, v in d.items():
-        new_key = f"{prefix}.{k}" if prefix else k
-        if isinstance(v, dict):
-            items.extend(flatten_dict(v, new_key).items())
-        elif isinstance(v, list):
-            for i, item in enumerate(v):
-                if isinstance(item, dict):
-                    items.extend(flatten_dict(item, f"{new_key}[{i}]").items())
-                else:
-                    items.append((f"{new_key}[{i}]", item))
-        else:
-            items.append((new_key, v))
-    return dict(items)
-
-def compare_entities(old_data, new_data, codice_fiscale, nome_ente):
-    """Confronta i dati vecchi e nuovi di un ente e restituisce le modifiche"""
-    changes = []
-    
-    # Appiattisci i dizionari per confrontare facilmente anche i sottolivelli
-    flat_old = flatten_dict(old_data)
-    flat_new = flatten_dict(new_data)
-    
-    # Confronta i dati appiattiti
-    for key in set(flat_old.keys()) | set(flat_new.keys()):
-        # Salta la data di controllo
-        if key == 'data_controllo':
-            continue
-            
-        old_value = flat_old.get(key, "N/A")
-        new_value = flat_new.get(key, "N/A")
-        
-        if old_value != new_value:
-            changes.append({
-                "nome": nome_ente,
-                "codice_fiscale": codice_fiscale,
-                "campo": key,
-                "valore_precedente": old_value,
-                "valore_nuovo": new_value
-            })
-    
-    return changes
-
 async def process_entity(page, ente, history, all_changes):
-    """Processa un singolo ente"""
+    """Processa un singolo ente, concentrandosi solo sui documenti"""
     codice_fiscale = ente["numero_repertorio"]
     nome = ente["nome"]
     
-    # Ricerca i dati attuali
-    current_data = await search_entity(page, codice_fiscale)
+    # Estrai solo i documenti (ottimizzato)
+    current_data = await extract_entity_documents(page, codice_fiscale, nome)
     
     # Verifica se abbiamo già dati storici per questo ente
     if codice_fiscale in history:
         old_data = history[codice_fiscale]
         
-        # Confronta i dati vecchi e nuovi
-        changes = compare_entities(old_data, current_data, codice_fiscale, nome)
+        # Confronta SOLO i documenti
+        changes = compare_documents(old_data, current_data, nome)
         if changes:
             all_changes.extend(changes)
-            logger.info(f"Rilevate {len(changes)} modifiche per l'ente {nome} ({codice_fiscale})")
+            logger.info(f"Rilevati {len(changes)} nuovi documenti per l'ente {nome}")
     else:
-        logger.info(f"Prima rilevazione per l'ente {nome} ({codice_fiscale})")
+        logger.info(f"Prima rilevazione per l'ente {nome}")
     
     # Aggiorna lo storico
     history[codice_fiscale] = current_data
@@ -678,8 +505,8 @@ async def process_entity(page, ente, history, all_changes):
     # Breve pausa tra un ente e l'altro
     await asyncio.sleep(2)
 
-async def check_for_changes():
-    """Controlla se ci sono modifiche nei dati degli enti monitorati"""
+async def check_for_new_documents():
+    """Controlla se ci sono nuovi documenti per gli enti monitorati"""
     config = load_config()
     history = load_history()
     all_changes = []
@@ -706,19 +533,19 @@ async def check_for_changes():
     # Salva lo storico aggiornato
     save_history(history)
     
-    # Se ci sono modifiche, invia una notifica
+    # Se ci sono nuovi documenti, invia una notifica
     if all_changes:
-        logger.info(f"Rilevate {len(all_changes)} modifiche in totale")
+        logger.info(f"Rilevati {len(all_changes)} nuovi documenti in totale")
         send_notification(all_changes)
     else:
-        logger.info("Nessuna modifica rilevata")
+        logger.info("Nessun nuovo documento rilevato")
     
     return all_changes
 
 # Funzione principale
 def main():
-    logger.info("Avvio del monitoraggio RUNTS")
-    asyncio.run(check_for_changes())
+    logger.info("Avvio del monitoraggio documenti RUNTS")
+    asyncio.run(check_for_new_documents())
     logger.info("Monitoraggio completato")
 
 if __name__ == "__main__":

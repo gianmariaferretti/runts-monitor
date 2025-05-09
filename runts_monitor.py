@@ -95,27 +95,145 @@ def extract_person_data(soup, person_num):
         return {}
 
 def extract_documents(soup):
-    """Estrae l'elenco dei documenti"""
+    """Estrae l'elenco dei documenti con particolare attenzione ai bilanci"""
     documents = []
     try:
-        docs_section = soup.find('h2', string='Atti e documenti')
-        if docs_section:
-            table = docs_section.find_next('table')
-            if table:
-                rows = table.find_all('tr')[1:]  # Salta l'intestazione
-                for row in rows:
-                    cells = row.find_all('td')
-                    if len(cells) >= 3:
-                        doc = {
-                            'documento': cells[0].get_text(strip=True),
-                            'codice_pratica': cells[1].get_text(strip=True),
-                            'data': cells[2].get_text(strip=True),
-                            'allegato': 'Presente' if len(cells) > 3 and cells[3].find('a') else 'Non presente'
-                        }
-                        documents.append(doc)
-    except Exception as e:
-        logger.error(f"Errore nell'estrazione dei documenti: {e}")
+        # Approccio 1: Cerca la sezione "Atti e documenti" come titolo
+        docs_section = None
         
+        # Metodi multipli per trovare la sezione documenti
+        selectors = [
+            # Metodo 1: Cerca titoli che contengono esattamente "Atti e documenti"
+            lambda s: s.find(['h1', 'h2', 'h3', 'h4'], string="Atti e documenti"),
+            
+            # Metodo 2: Cerca titoli che contengono in qualche modo "Atti e documenti"
+            lambda s: s.find(['h1', 'h2', 'h3', 'h4'], string=lambda x: x and "Atti e documenti" in x),
+            
+            # Metodo 3: Cerca div con testo "Atti e documenti"
+            lambda s: s.find('div', string=lambda x: x and "Atti e documenti" in x),
+            
+            # Metodo 4: Cerca qualsiasi elemento con testo "Atti e documenti"
+            lambda s: s.find(string=lambda x: x and "Atti e documenti" in x),
+            
+            # Metodo 5: Cerca tabelle con intestazioni tipiche di documenti
+            lambda s: s.find('table', lambda t: t.find('th', string=lambda x: x and ("Documento" in x or "documento" in x or "Allegato" in x)))
+        ]
+        
+        # Prova ciascun selettore finché non troviamo una sezione
+        for selector in selectors:
+            docs_section = selector(soup)
+            if docs_section:
+                logger.info(f"Trovata sezione documenti con selettore: {selector.__name__ if hasattr(selector, '__name__') else str(selector)}")
+                break
+        
+        # Se abbiamo trovato una sezione testo (non una tabella), dobbiamo trovare la tabella associata
+        tables = []
+        
+        if docs_section and docs_section.name != 'table':
+            # Se abbiamo trovato un elemento di testo, cerchiamo la tabella successiva
+            if hasattr(docs_section, 'find_next'):
+                table = docs_section.find_next('table')
+                if table:
+                    tables.append(table)
+            # Se abbiamo trovato una stringa di testo, cerchiamo la tabella dal suo genitore
+            elif docs_section.parent and hasattr(docs_section.parent, 'find_next'):
+                table = docs_section.parent.find_next('table')
+                if table:
+                    tables.append(table)
+        elif docs_section and docs_section.name == 'table':
+            # Se abbiamo trovato direttamente una tabella
+            tables.append(docs_section)
+        
+        # Se non abbiamo trovato tabelle, cerca tutte le tabelle che potrebbero contenere documenti
+        if not tables:
+            logger.info("Cercando tabelle generiche che potrebbero contenere documenti")
+            tables = soup.find_all('table')
+        
+        # Processa ciascuna tabella trovata
+        for table in tables:
+            # Assicuriamoci che la tabella abbia delle righe
+            rows = table.find_all('tr')
+            if len(rows) <= 1:  # Solo intestazione o vuota
+                continue
+                
+            # Ottieni le intestazioni
+            header_cells = rows[0].find_all(['th', 'td'])
+            headers = [cell.get_text(strip=True).lower() for cell in header_cells]
+            
+            # Verifica che questa sembri essere una tabella di documenti
+            if not any(keyword in ' '.join(headers) for keyword in 
+                      ['documento', 'file', 'pratica', 'codice', 'allegato', 'data']):
+                logger.debug("Tabella non sembra contenere documenti")
+                continue
+            
+            # Mappa le colonne
+            col_index = {
+                'documento': next((i for i, h in enumerate(headers) if any(kw in h for kw in ['documento', 'file', 'titolo'])), 0),
+                'codice': next((i for i, h in enumerate(headers) if any(kw in h for kw in ['codice', 'pratica', 'id'])), 1),
+                'data': next((i for i, h in enumerate(headers) if any(kw in h for kw in ['data', 'anno', 'period'])), 2),
+                'allegato': next((i for i, h in enumerate(headers) if any(kw in h for kw in ['allegato', 'download', 'file'])), 3)
+            }
+            
+            # Processa le righe (esclusa l'intestazione)
+            for row in rows[1:]:
+                cells = row.find_all(['td', 'th'])
+                if len(cells) < 2:  # Non abbastanza celle
+                    continue
+                
+                try:
+                    # Estrai i dati con gestione degli errori per ogni cella
+                    doc_type = ""
+                    if col_index['documento'] < len(cells):
+                        doc_type = cells[col_index['documento']].get_text(strip=True)
+                    
+                    code = ""
+                    if col_index['codice'] < len(cells):
+                        code = cells[col_index['codice']].get_text(strip=True)
+                    
+                    date = ""
+                    if col_index['data'] < len(cells) and cells[col_index['data']]:
+                        date_text = cells[col_index['data']].get_text(strip=True)
+                        # Cerca un anno in formato 20XX o date formattate
+                        year_match = re.search(r'20\d{2}', date_text)
+                        if year_match:
+                            date = year_match.group(0)
+                        else:
+                            date = date_text
+                    
+                    has_attachment = "No"
+                    if col_index['allegato'] < len(cells):
+                        attachment_cell = cells[col_index['allegato']]
+                        if (attachment_cell.find('a') or attachment_cell.find('img') or 
+                            'download' in attachment_cell.get('class', []) or
+                            attachment_cell.find(lambda tag: tag.name == 'i' and 'download' in tag.get('class', []))):
+                            has_attachment = "Sì"
+                    
+                    # Se abbiamo almeno un tipo di documento o un codice pratica valido, aggiungilo
+                    if doc_type or code:
+                        document_data = {
+                            "tipo_documento": doc_type,
+                            "codice_pratica": code,
+                            "anno": date,
+                            "ha_allegato": has_attachment
+                        }
+                        # Evita documenti duplicati verificando se già esiste un doc con stesso tipo e codice
+                        if not any(d['tipo_documento'] == doc_type and d['codice_pratica'] == code 
+                                   for d in documents):
+                            documents.append(document_data)
+                except Exception as e:
+                    logger.error(f"Errore nell'estrazione dei dati del documento: {e}")
+        
+        # Ordina i documenti: prima i bilanci, poi per anno (decrescente)
+        documents.sort(key=lambda x: (
+            0 if "BILANCIO" in x["tipo_documento"].upper() else 1,  # Bilanci prima
+            -1 * int(x["anno"]) if x["anno"].isdigit() else 0       # Anni più recenti prima
+        ))
+        
+        logger.info(f"Estratti {len(documents)} documenti")
+                        
+    except Exception as e:
+        logger.error(f"Errore generale nell'estrazione dei documenti: {e}")
+    
     return documents
 
 async def search_entity(page, codice_fiscale):

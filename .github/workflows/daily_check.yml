@@ -1,22 +1,18 @@
-name: Daily RUNTS Monitoring
-
+name: Daily RUNTS Document Monitoring
 on:
   schedule:
     - cron: '0 8 * * *'  # Esegui ogni giorno alle 8:00 UTC
   workflow_dispatch:  # Consente l'esecuzione manuale
-
 jobs:
-  check-runts:
+  check-runts-documents:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -24,10 +20,8 @@ jobs:
         
     - name: Install Playwright browsers
       run: python -m playwright install chromium
-
     - name: Run monitoring script
       run: python runts_monitor.py
-
     - name: Check for notifications
       id: check_notifications
       run: |
@@ -38,8 +32,7 @@ jobs:
           echo "Notifications found"
           echo "has_notifications=true" >> $GITHUB_OUTPUT
         fi
-
-    - name: Create GitHub Issue for changes
+    - name: Create GitHub Issue for new documents
       if: steps.check_notifications.outputs.has_notifications == 'true'
       uses: actions/github-script@v5
       with:
@@ -57,27 +50,42 @@ jobs:
             const filePath = path.join(notificationDir, file);
             const notification = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             
-            // Crea un'issue
+            // Crea un'issue focalizzata sui nuovi documenti
             const changes = notification.changes;
-            const changesList = changes.map(change => 
-              `- **${change.nome}** (${change.codice_fiscale}): "${change.campo}" è cambiato da "${change.valore_precedente}" a "${change.valore_nuovo}"`
-            ).join('\n');
+            const bilanci = changes.filter(change => change.campo === "Nuovo bilancio pubblicato");
+            const altriDocs = changes.filter(change => change.campo !== "Nuovo bilancio pubblicato");
+            
+            let body = '';
+            
+            if (bilanci.length > 0) {
+              body += "## 📊 NUOVI BILANCI\n\n";
+              bilanci.forEach(change => {
+                body += `- **${change.nome}** (${change.codice_fiscale}): ${change.valore_nuovo}\n`;
+              });
+              body += "\n";
+            }
+            
+            if (altriDocs.length > 0) {
+              body += "## 📄 ALTRI DOCUMENTI\n\n";
+              altriDocs.forEach(change => {
+                body += `- **${change.nome}** (${change.codice_fiscale}): ${change.valore_nuovo}\n`;
+              });
+            }
             
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `Modifiche RUNTS rilevate il ${new Date().toISOString().split('T')[0]}`,
-              body: `Sono state rilevate le seguenti modifiche:\n\n${changesList}`
+              title: `Nuovi documenti RUNTS ${new Date().toISOString().split('T')[0]}`,
+              body: body
             });
             
             // Elimina il file di notifica dopo averlo elaborato
             fs.unlinkSync(filePath);
           }
-
     - name: Commit and push updated history
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add data/history.json || true
-        git commit -m "Aggiorna storico dati [skip ci]" || true
+        git add data/documents_history.json || true
+        git commit -m "Aggiorna storico documenti [skip ci]" || true
         git push

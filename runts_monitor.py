@@ -5,6 +5,7 @@ import asyncio
 from datetime import datetime
 import logging
 import sys
+import re
 from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright
 
@@ -45,7 +46,7 @@ def save_history(history):
 def extract_text(soup, label_text):
     """Estrae testo da un elemento trovato con il selettore CSS"""
     try:
-        # Cerca sia per elementi strong che contengono il testo che per text nodes
+        # Cerca elementi strong che contengono il testo
         element = soup.find('strong', string=lambda x: x and label_text in x)
         if element and element.find_next_sibling():
             return element.find_next_sibling().get_text(strip=True)
@@ -63,6 +64,7 @@ def extract_text(soup, label_text):
 def extract_person_data(soup, person_num):
     """Estrae i dati di una persona specifica"""
     try:
+        # Cerca sezioni che contengono "Persona X"
         person_section = soup.find(string=lambda x: x and f"Persona {person_num}" in x)
         if not person_section:
             return {}
@@ -133,137 +135,200 @@ async def search_entity(page, codice_fiscale):
     
     try:
         # Naviga alla pagina di ricerca
-        await page.goto("https://servizi.lavoro.gov.it/runts/it-it/Ricerca-enti", wait_until="domcontentloaded")
+        await page.goto("https://servizi.lavoro.gov.it/runts/it-it/Ricerca-enti", wait_until="networkidle", timeout=30000)
+        
+        # Attendi che la pagina sia completamente caricata
+        await asyncio.sleep(2)
         
         # Gestione popup cookie se presente
         try:
-            accept_cookie = await page.wait_for_selector("button:has-text('ACCETTA')", timeout=5000)
-            if accept_cookie:
-                await accept_cookie.click()
-                logger.info("Popup cookie accettato")
+            # Prova diversi selettori per il pulsante dei cookie
+            for cookie_selector in ["button:has-text('ACCETTA')", "a.cookieClose", "button.cookie-accept"]:
+                cookie_button = await page.query_selector(cookie_selector)
+                if cookie_button:
+                    await cookie_button.click()
+                    logger.info(f"Popup cookie accettato con selettore: {cookie_selector}")
+                    break
         except Exception as e:
             logger.info(f"Popup cookie non trovato o già accettato: {e}")
         
-        # Inserisci il numero repertorio e cerca
-        # Il selettore corretto è #dnn_ctr446_View_txtNumeroRepertorio per Numero Repertorio
-        # o #CodiceFiscale per Codice Fiscale
-        try:
-            await page.fill("#CodiceFiscale", codice_fiscale)
-        except Exception:
+        # Inserisci il codice fiscale nel campo appropriato
+        # Prova diversi selettori per il campo
+        filled = False
+        for selector in ["#CodiceFiscale", "#dnn_ctr446_View_txtCodiceFiscale", "input[id*='CodiceFiscale']"]:
             try:
-                await page.fill("#dnn_ctr446_View_txtCodiceFiscale", codice_fiscale)
+                input_field = await page.query_selector(selector)
+                if input_field:
+                    await input_field.fill(codice_fiscale)
+                    filled = True
+                    logger.info(f"Campo codice fiscale compilato con selettore: {selector}")
+                    break
             except Exception:
-                logger.warning("Impossibile trovare il campo del codice fiscale, provo con altre opzioni")
-                try:
-                    # Prova un selettore più generico
-                    await page.fill("input[id*='CodiceFiscale']", codice_fiscale)
-                except Exception as e:
-                    logger.error(f"Errore nel compilare il campo del codice fiscale: {e}")
-                    return entity_data
+                continue
         
-        # Clicca sul pulsante CERCA
-        try:
-            await page.click("button:has-text('CERCA')")
-        except Exception:
+        if not filled:
+            logger.warning("Impossibile trovare il campo del codice fiscale")
+            # Prova un approccio più generico con JavaScript
             try:
-                await page.click("#dnn_ctr446_View_btnRicercaEnti")
+                await page.evaluate("""() => {
+                    const inputs = Array.from(document.querySelectorAll('input'));
+                    const cfInput = inputs.find(i => i.id && i.id.toLowerCase().includes('codice') && i.id.toLowerCase().includes('fiscale'));
+                    if (cfInput) cfInput.value = arguments[0];
+                }""", codice_fiscale)
+                filled = True
+                logger.info("Campo codice fiscale compilato tramite JavaScript")
             except Exception as e:
-                logger.error(f"Errore nel cliccare il pulsante CERCA: {e}")
+                logger.error(f"Errore anche con JavaScript: {e}")
                 return entity_data
         
-        # Attendi che i risultati appaiano
-        try:
-            await page.wait_for_selector("table", timeout=10000)
-        except Exception as e:
-            logger.warning(f"Nessuna tabella di risultati trovata: {e}")
-            return entity_data
+        # Clicca sul pulsante CERCA
+        clicked = False
+        for selector in ["button:has-text('CERCA')", "#dnn_ctr446_View_btnRicercaEnti", "input[value='CERCA']", "button.btn-primary"]:
+            try:
+                search_button = await page.query_selector(selector)
+                if search_button:
+                    await search_button.click()
+                    clicked = True
+                    logger.info(f"Pulsante CERCA cliccato con selettore: {selector}")
+                    await page.wait_for_load_state("networkidle", timeout=15000)
+                    break
+            except Exception:
+                continue
+        
+        if not clicked:
+            logger.warning("Impossibile trovare il pulsante CERCA, provo con JavaScript")
+            try:
+                await page.evaluate("""() => {
+                    const buttons = Array.from(document.querySelectorAll('button, input[type="submit"]'));
+                    const searchBtn = buttons.find(b => b.textContent && b.textContent.includes('CERCA'));
+                    if (searchBtn) searchBtn.click();
+                }""")
+                clicked = True
+                logger.info("Pulsante CERCA cliccato tramite JavaScript")
+                await page.wait_for_load_state("networkidle", timeout=15000)
+            except Exception as e:
+                logger.error(f"Errore nel cliccare con JavaScript: {e}")
+                return entity_data
+        
+        # Attendi che i risultati della ricerca siano caricati
+        await asyncio.sleep(3)
         
         # Verifica se ci sono risultati
-        no_results = await page.locator("text='Nessun risultato trovato'").count()
-        if no_results > 0:
+        page_content = await page.content()
+        if "Nessun risultato trovato" in page_content:
             logger.warning(f"Nessun risultato trovato per il codice fiscale: {codice_fiscale}")
             return entity_data
         
+        # Controlla se c'è una tabella di risultati
+        table = await page.query_selector("table")
+        if not table:
+            logger.warning(f"Nessuna tabella di risultati trovata per il codice fiscale: {codice_fiscale}")
+            return entity_data
+        
         # Estrai i dati di base dalla tabella
-        rows = await page.locator("table tr").all()
-        if len(rows) > 1:  # Se c'è almeno una riga oltre l'intestazione
+        rows = await table.query_selector_all("tr")
+        if len(rows) > 1:
             row = rows[1]
-            cells = await row.locator("td").all()
+            cells = await row.query_selector_all("td")
             if len(cells) >= 3:
                 entity_data["dati_base"] = {
                     "denominazione": await cells[0].inner_text(),
                     "comune": await cells[1].inner_text(),
                     "sezione": await cells[2].inner_text()
                 }
+                logger.info(f"Dati base estratti: {entity_data['dati_base']}")
         
         # Clicca sul pulsante Dettaglio
-        try:
-            await page.click("a:has-text('DETTAGLIO')")
-        except Exception:
+        dettaglio_clicked = False
+        for selector in ["a:has-text('DETTAGLIO')", "input[value='Dettaglio']", ".btn:has-text('Dettaglio')"]:
             try:
-                await page.click("input[value='Dettaglio']")
+                dettaglio_button = await page.query_selector(selector)
+                if dettaglio_button:
+                    await dettaglio_button.click()
+                    dettaglio_clicked = True
+                    logger.info(f"Pulsante DETTAGLIO cliccato con selettore: {selector}")
+                    break
+            except Exception:
+                continue
+        
+        if not dettaglio_clicked:
+            logger.warning("Impossibile trovare il pulsante DETTAGLIO, provo con JavaScript")
+            try:
+                await page.evaluate("""() => {
+                    const links = Array.from(document.querySelectorAll('a, input, button'));
+                    const detailLink = links.find(l => l.textContent && l.textContent.includes('DETTAGLIO') || l.value && l.value.includes('Dettaglio'));
+                    if (detailLink) detailLink.click();
+                }""")
+                dettaglio_clicked = True
+                logger.info("Pulsante DETTAGLIO cliccato tramite JavaScript")
             except Exception as e:
-                logger.error(f"Errore nel cliccare il pulsante DETTAGLIO: {e}")
+                logger.error(f"Errore nel cliccare DETTAGLIO con JavaScript: {e}")
                 return entity_data
         
-        # Aspetta che la pagina di dettaglio carichi
-        try:
-            await page.wait_for_selector("h1, h2", timeout=10000)
-        except Exception as e:
-            logger.error(f"Errore nell'attesa della pagina di dettaglio: {e}")
-            return entity_data
+        # Aspetta che la pagina di dettaglio carichi completamente
+        # NON aspettiamo elementi h1/h2 visibili (che potrebbero essere nascosti)
+        # ma aspettiamo che la navigazione sia completa
+        await page.wait_for_load_state("networkidle", timeout=20000)
+        await asyncio.sleep(5)  # Pausa per assicurarci che la pagina sia completamente renderizzata
+        
+        # Verifica che siamo nella pagina di dettaglio controllando l'URL
+        current_url = page.url
+        if "Ente" in current_url or "Dettaglio" in current_url:
+            logger.info(f"Siamo nella pagina di dettaglio: {current_url}")
+        else:
+            logger.warning(f"URL inaspettato, potremmo non essere nella pagina di dettaglio: {current_url}")
         
         # Estrai tutti i dati dalla pagina
         content = await page.content()
         soup = BeautifulSoup(content, "html.parser")
         
-        # Dati generali dell'ente
-        try:
-            # Trova il titolo dell'ente
-            h1 = soup.find('h1')
-            h2 = soup.find('h2')
-            entity_data["dati_ente"]["denominazione"] = h1.get_text(strip=True) if h1 else (h2.get_text(strip=True) if h2 else None)
-            
-            # Altri dati dell'ente
-            entity_data["dati_ente"].update({
-                "repertorio": extract_text(soup, "Repertorio"),
-                "codice_fiscale": extract_text(soup, "Codice fiscale"),
-                "data_iscrizione": extract_text(soup, "Iscritto il"),
-                "data_iscrizione_sezione": extract_text(soup, "Iscritto nella sezione in data"),
-                "sezione": extract_text(soup, "Sezione"),
-                "forma_giuridica": extract_text(soup, "Forma Giuridica"),
-                "email_pec": extract_text(soup, "Email PEC"),
-                "ultimo_aggiornamento": extract_text(soup, "Ultimo aggiornamento statutario"),
-                "atto_costitutivo": extract_text(soup, "Atto costitutivo")
-            })
-            
-            # Rimuovi i valori None
-            entity_data["dati_ente"] = {k: v for k, v in entity_data["dati_ente"].items() if v is not None}
-            
-            # Sede legale
-            entity_data["sede_legale"] = {
-                "stato": extract_text(soup, "Stato"),
-                "provincia": extract_text(soup, "Provincia"),
-                "comune": extract_text(soup, "Comune"),
-                "indirizzo": extract_text(soup, "Indirizzo"),
-                "civico": extract_text(soup, "Civico"),
-                "cap": extract_text(soup, "CAP")
-            }
-            
-            # Rimuovi i valori None
-            entity_data["sede_legale"] = {k: v for k, v in entity_data["sede_legale"].items() if v is not None}
-            
-            # Estrai dati delle persone (fino a 10 persone)
-            for i in range(1, 11):
-                person_data = extract_person_data(soup, i)
-                if person_data:
-                    entity_data["persone"].append(person_data)
-            
-            # Estrai documenti
-            entity_data["documenti"] = extract_documents(soup)
-            
-        except Exception as e:
-            logger.error(f"Errore nell'estrazione dei dati dalla pagina di dettaglio: {e}")
+        # Dati ente
+        title_text = None
+        title_elements = soup.select(".ente_titolo-xl, .titolo-ente, h2:not([style*='display: none']), h3")
+        if title_elements:
+            title_text = title_elements[0].get_text(strip=True)
+            entity_data["dati_ente"]["denominazione"] = title_text
+            logger.info(f"Trovato titolo ente: {title_text}")
+        
+        # Estrai altri dati dell'ente
+        for field, labels in {
+            "repertorio": ["Repertorio"],
+            "codice_fiscale": ["Codice fiscale"],
+            "data_iscrizione": ["Iscritto il"],
+            "sezione": ["Sezione"],
+            "forma_giuridica": ["Forma Giuridica"],
+            "email_pec": ["Email PEC"],
+            "atto_costitutivo": ["Atto costitutivo"]
+        }.items():
+            for label in labels:
+                value = extract_text(soup, label)
+                if value:
+                    entity_data["dati_ente"][field] = value
+                    break
+        
+        # Sede legale
+        for field, label in {
+            "stato": "Stato",
+            "provincia": "Provincia",
+            "comune": "Comune",
+            "indirizzo": "Indirizzo",
+            "civico": "Civico",
+            "cap": "CAP"
+        }.items():
+            value = extract_text(soup, label)
+            if value:
+                entity_data["sede_legale"][field] = value
+        
+        # Estrai dati delle persone (fino a 10 persone)
+        for i in range(1, 11):
+            person_data = extract_person_data(soup, i)
+            if person_data:
+                entity_data["persone"].append(person_data)
+                logger.info(f"Estratti dati della persona {i}")
+        
+        # Estrai documenti
+        entity_data["documenti"] = extract_documents(soup)
+        logger.info(f"Estratti {len(entity_data['documenti'])} documenti")
         
         return entity_data
         
@@ -378,6 +443,9 @@ async def process_entity(page, ente, history, all_changes):
     
     # Aggiorna lo storico
     history[codice_fiscale] = current_data
+    
+    # Breve pausa tra un ente e l'altro
+    await asyncio.sleep(2)
 
 async def check_for_changes():
     """Controlla se ci sono modifiche nei dati degli enti monitorati"""
@@ -386,17 +454,20 @@ async def check_for_changes():
     all_changes = []
     
     async with async_playwright() as playwright:
-        # Usa un browser Chromium
-        browser = await playwright.chromium.launch(headless=True)
-        context = await browser.new_context()
+        # Usa un browser Chromium con impostazioni più permissive
+        browser = await playwright.chromium.launch(
+            headless=True,
+            args=['--disable-web-security', '--no-sandbox', '--disable-features=site-per-process']
+        )
+        context = await browser.new_context(
+            viewport={'width': 1920, 'height': 1080},
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
+        )
         page = await context.new_page()
         
         try:
             for ente in config["enti"]:
                 await process_entity(page, ente, history, all_changes)
-                
-                # Piccola pausa per non sovraccaricare il server
-                await asyncio.sleep(2)
         
         finally:
             await browser.close()

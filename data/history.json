@@ -1,6 +1,6 @@
 {
   "93062320424": {
-    "data_controllo": "2025-05-09 08:41:23",
+    "data_controllo": "2025-05-09 08:59:12",
     "codice_fiscale": "93062320424",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI ANCONA aps",
@@ -134,10 +134,35 @@
         "data_nomina": "23/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "93111670662": {
-    "data_controllo": "2025-05-09 08:41:43",
+    "data_controllo": "2025-05-09 08:59:32",
     "codice_fiscale": "93111670662",
     "dati_base": {
       "denominazione": "USACLI AQUILA APS",
@@ -235,10 +260,35 @@
         "data_nomina": "19/01/2022"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92036200514": {
-    "data_controllo": "2025-05-09 08:42:01",
+    "data_controllo": "2025-05-09 08:59:49",
     "codice_fiscale": "92036200514",
     "dati_base": {},
     "dati_ente": {},
@@ -247,7 +297,7 @@
     "documenti": []
   },
   "92042840055": {
-    "data_controllo": "2025-05-09 08:42:13",
+    "data_controllo": "2025-05-09 09:00:00",
     "codice_fiscale": "92042840055",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS DI ASTI",
@@ -357,10 +407,35 @@
         "data_nomina": "18/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92020480627": {
-    "data_controllo": "2025-05-09 08:42:30",
+    "data_controllo": "2025-05-09 09:00:17",
     "codice_fiscale": "92020480627",
     "dati_base": {
       "denominazione": "US ACLI PROVINCIALE DI BENEVENTO APS",
@@ -397,10 +472,29 @@
         "data_nomina": "12/01/2024"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "95186450169": {
-    "data_controllo": "2025-05-09 08:42:47",
+    "data_controllo": "2025-05-09 09:00:35",
     "codice_fiscale": "95186450169",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI BERGAMO APS",
@@ -510,10 +604,35 @@
         "data_nomina": "04/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "90057120025": {
-    "data_controllo": "2025-05-09 08:43:04",
+    "data_controllo": "2025-05-09 09:00:52",
     "codice_fiscale": "90057120025",
     "dati_base": {
       "denominazione": "COMITATO PROVINCIALE US ACLI APS DI BIELLA",
@@ -599,10 +718,35 @@
         "data_nomina": "28/04/2022"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92017850378": {
-    "data_controllo": "2025-05-09 08:43:22",
+    "data_controllo": "2025-05-09 09:01:09",
     "codice_fiscale": "92017850378",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS",
@@ -700,10 +844,41 @@
         "data_nomina": "01/01/2023"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DICHIARAZIONE",
+        "codice_pratica": "D00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "98007270782": {
-    "data_controllo": "2025-05-09 08:43:40",
+    "data_controllo": "2025-05-09 09:01:26",
     "codice_fiscale": "98007270782",
     "dati_base": {
       "denominazione": "USACLI - UNIONE SPORTIVA ACLI REGIONALE CALABRIA APS",
@@ -789,10 +964,29 @@
         "data_nomina": "10/03/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
+        "codice_pratica": "R21",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "93037790875": {
-    "data_controllo": "2025-05-09 08:43:57",
+    "data_controllo": "2025-05-09 09:01:43",
     "codice_fiscale": "93037790875",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI CATANIA A.P.S.",
@@ -866,10 +1060,23 @@
         "data_nomina": "10/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "97015130798": {
-    "data_controllo": "2025-05-09 08:44:14",
+    "data_controllo": "2025-05-09 09:02:01",
     "codice_fiscale": "97015130798",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI PROVINCIALE CATANZARO APS",
@@ -943,10 +1150,29 @@
         "data_nomina": "30/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
+        "codice_pratica": "R21",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "94177950485": {
-    "data_controllo": "2025-05-09 08:44:32",
+    "data_controllo": "2025-05-09 09:02:17",
     "codice_fiscale": "94177950485",
     "dati_base": {
       "denominazione": "COMITATO PROVINCIALE US ACLI FIRENZE APS",
@@ -1056,10 +1282,23 @@
         "data_nomina": "03/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "95068380104": {
-    "data_controllo": "2025-05-09 08:44:49",
+    "data_controllo": "2025-05-09 09:02:34",
     "codice_fiscale": "95068380104",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS GENOVA",
@@ -1205,10 +1444,47 @@
         "data_nomina": "09/01/2025"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "VERBALE",
+        "codice_pratica": "V00",
+        "anno": "2022",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DICHIARAZIONE",
+        "codice_pratica": "D00",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "91000430594": {
-    "data_controllo": "2025-05-09 08:45:07",
+    "data_controllo": "2025-05-09 09:02:52",
     "codice_fiscale": "91000430594",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS PROVINCIALE DI LATINA",
@@ -1282,10 +1558,47 @@
         "data_nomina": "01/01/2023"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2022",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DICHIARAZIONE",
+        "codice_pratica": "D00",
+        "anno": "2022",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "VERBALE",
+        "codice_pratica": "V00",
+        "anno": "2022",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "93012430752": {
-    "data_controllo": "2025-05-09 08:45:24",
+    "data_controllo": "2025-05-09 09:03:09",
     "codice_fiscale": "93012430752",
     "dati_base": {
       "denominazione": "COMITATO PROVINCIALE US ACLI APS LECCE",
@@ -1419,10 +1732,35 @@
         "data_nomina": "01/10/2012"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92531620158": {
-    "data_controllo": "2025-05-09 08:45:42",
+    "data_controllo": "2025-05-09 09:03:26",
     "codice_fiscale": "92531620158",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROV. LODI APS",
@@ -1508,10 +1846,35 @@
         "data_nomina": "31/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
+        "codice_pratica": "R21",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "80013980463": {
-    "data_controllo": "2025-05-09 08:46:00",
+    "data_controllo": "2025-05-09 09:03:43",
     "codice_fiscale": "80013980463",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI LUCCA APS",
@@ -1620,10 +1983,23 @@
         "data_nomina": "13/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "1424190435": {
-    "data_controllo": "2025-05-09 08:46:17",
+    "data_controllo": "2025-05-09 09:03:59",
     "codice_fiscale": "1424190435",
     "dati_base": {},
     "dati_ente": {},
@@ -1632,7 +2008,7 @@
     "documenti": []
   },
   "3103400366": {
-    "data_controllo": "2025-05-09 08:46:29",
+    "data_controllo": "2025-05-09 09:04:11",
     "codice_fiscale": "3103400366",
     "dati_base": {},
     "dati_ente": {},
@@ -1641,7 +2017,7 @@
     "documenti": []
   },
   "80008130546": {
-    "data_controllo": "2025-05-09 08:46:41",
+    "data_controllo": "2025-05-09 09:04:23",
     "codice_fiscale": "80008130546",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS COMITATO DI PERUGIA",
@@ -1727,10 +2103,41 @@
         "data_nomina": "28/10/2023"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
+        "codice_pratica": "R21",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTESTAZIONE / AUTORIZZAZIONE DELL'AUTORITA' RELIGIOSA COMPETENTE",
+        "codice_pratica": "A00",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "91033340331": {
-    "data_controllo": "2025-05-09 08:46:58",
+    "data_controllo": "2025-05-09 09:04:40",
     "codice_fiscale": "91033340331",
     "dati_base": {
       "denominazione": "COMITATO PROVINCIALE US ACLI APS",
@@ -1828,10 +2235,41 @@
         "data_nomina": "30/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DICHIARAZIONE",
+        "codice_pratica": "D00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "97509140014": {
-    "data_controllo": "2025-05-09 08:47:16",
+    "data_controllo": "2025-05-09 09:04:57",
     "codice_fiscale": "97509140014",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI PIEMONTE",
@@ -1965,10 +2403,35 @@
         "data_nomina": "27/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "91173280354": {
-    "data_controllo": "2025-05-09 08:47:33",
+    "data_controllo": "2025-05-09 09:05:14",
     "codice_fiscale": "91173280354",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI COMITATO REGGIO EMILIA A.P.S.",
@@ -2078,10 +2541,41 @@
         "data_nomina": "30/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DICHIARAZIONE",
+        "codice_pratica": "D00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92041680908": {
-    "data_controllo": "2025-05-09 08:47:51",
+    "data_controllo": "2025-05-09 09:05:32",
     "codice_fiscale": "92041680908",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS (US ACLI APS)",
@@ -2215,10 +2709,29 @@
         "data_nomina": "12/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "97194070823": {
-    "data_controllo": "2025-05-09 08:48:08",
+    "data_controllo": "2025-05-09 09:05:48",
     "codice_fiscale": "97194070823",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS SICILIA",
@@ -2340,10 +2853,35 @@
         "data_nomina": "14/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92075490521": {
-    "data_controllo": "2025-05-09 08:48:26",
+    "data_controllo": "2025-05-09 09:06:06",
     "codice_fiscale": "92075490521",
     "dati_base": {
       "denominazione": "US ACLI SIENA APS",
@@ -2381,10 +2919,23 @@
         "data_nomina": "15/06/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "93035600894": {
-    "data_controllo": "2025-05-09 08:48:43",
+    "data_controllo": "2025-05-09 09:06:23",
     "codice_fiscale": "93035600894",
     "dati_base": {
       "denominazione": "US ACLI APS SIRACUSA",
@@ -2494,10 +3045,23 @@
         "data_nomina": "05/01/2022"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "80029110261": {
-    "data_controllo": "2025-05-09 08:49:01",
+    "data_controllo": "2025-05-09 09:06:40",
     "codice_fiscale": "80029110261",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS TREVISO",
@@ -2631,10 +3195,35 @@
         "data_nomina": "30/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "94033170302": {
-    "data_controllo": "2025-05-09 08:49:18",
+    "data_controllo": "2025-05-09 09:06:57",
     "codice_fiscale": "94033170302",
     "dati_base": {},
     "dati_ente": {},
@@ -2643,7 +3232,7 @@
     "documenti": []
   },
   "2707951204": {
-    "data_controllo": "2025-05-09 08:49:30",
+    "data_controllo": "2025-05-09 09:07:09",
     "codice_fiscale": "2707951204",
     "dati_base": {},
     "dati_ente": {},
@@ -2652,7 +3241,7 @@
     "documenti": []
   },
   "95032770125": {
-    "data_controllo": "2025-05-09 08:49:42",
+    "data_controllo": "2025-05-09 09:07:21",
     "codice_fiscale": "95032770125",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI APS PROVINCIALE VARESE",
@@ -2786,10 +3375,29 @@
         "data_nomina": "05/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "94005260271": {
-    "data_controllo": "2025-05-09 08:49:59",
+    "data_controllo": "2025-05-09 09:07:38",
     "codice_fiscale": "94005260271",
     "dati_base": {
       "denominazione": "COMITATO PROVINCIALE US ACLI VENEZIA APS",
@@ -2851,10 +3459,35 @@
         "data_nomina": "15/02/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "94014660024": {
-    "data_controllo": "2025-05-09 08:50:17",
+    "data_controllo": "2025-05-09 09:07:55",
     "codice_fiscale": "94014660024",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA A.C.L.I. PROVINCIALE - APS",
@@ -2952,10 +3585,35 @@
         "data_nomina": "23/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "95101640241": {
-    "data_controllo": "2025-05-09 08:50:35",
+    "data_controllo": "2025-05-09 09:08:12",
     "codice_fiscale": "95101640241",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI VICENZA APS",
@@ -3017,10 +3675,35 @@
         "data_nomina": "21/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "90093450568": {
-    "data_controllo": "2025-05-09 08:50:52",
+    "data_controllo": "2025-05-09 09:08:29",
     "codice_fiscale": "90093450568",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI VITERBO APS",
@@ -3142,6 +3825,31 @@
         "data_nomina": "30/01/2021"
       }
     ],
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   }
 }

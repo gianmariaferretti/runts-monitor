@@ -32,56 +32,73 @@ jobs:
           echo "Notifications found"
           echo "has_notifications=true" >> $GITHUB_OUTPUT
         fi
-    - name: Create GitHub Issue for new documents
-      if: steps.check_notifications.outputs.has_notifications == 'true'
-      uses: actions/github-script@v5
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const fs = require('fs');
-          const path = require('path');
-          
-          // Trova i file di notifica
-          const notificationDir = path.join(process.env.GITHUB_WORKSPACE, 'data');
-          const files = fs.readdirSync(notificationDir)
-                         .filter(file => file.startsWith('notification_') && file.endsWith('.json'));
-          
-          for (const file of files) {
-            const filePath = path.join(notificationDir, file);
-            const notification = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            
-            // Crea un'issue focalizzata sui nuovi documenti
-            const changes = notification.changes;
-            const bilanci = changes.filter(change => change.campo === "Nuovo bilancio pubblicato");
-            const altriDocs = changes.filter(change => change.campo !== "Nuovo bilancio pubblicato");
-            
-            let body = '';
-            
-            if (bilanci.length > 0) {
-              body += "## 📊 NUOVI BILANCI\n\n";
-              bilanci.forEach(change => {
-                body += `- **${change.nome}** (${change.codice_fiscale}): ${change.valore_nuovo}\n`;
-              });
-              body += "\n";
-            }
-            
-            if (altriDocs.length > 0) {
-              body += "## 📄 ALTRI DOCUMENTI\n\n";
-              altriDocs.forEach(change => {
-                body += `- **${change.nome}** (${change.codice_fiscale}): ${change.valore_nuovo}\n`;
-              });
-            }
-            
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `Nuovi documenti RUNTS ${new Date().toISOString().split('T')[0]}`,
-              body: body
-            });
-            
-            // Elimina il file di notifica dopo averlo elaborato
-            fs.unlinkSync(filePath);
-          }
+ - name: Create GitHub Issue for new documents
+  if: steps.check_notifications.outputs.has_notifications == 'true'
+  uses: actions/github-script@v5
+  with:
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+    script: |
+      const fs = require('fs');
+      const path = require('path');
+      
+      // Trova i file di notifica
+      const notificationDir = path.join(process.env.GITHUB_WORKSPACE, 'data');
+      const files = fs.readdirSync(notificationDir)
+                     .filter(file => file.startsWith('notification_') && file.endsWith('.json'));
+      
+      for (const file of files) {
+        const filePath = path.join(notificationDir, file);
+        const notification = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        const changes = notification.changes;
+        
+        // Separa i documenti per categoria
+        const bilanci2024 = changes.filter(change => change.campo === "Nuovo bilancio 2024 pubblicato");
+        const altriBilanci = changes.filter(change => change.campo !== "Nuovo bilancio 2024 pubblicato" && change.campo.includes("Nuovo bilancio"));
+        const altriDocs = changes.filter(change => !change.campo.includes("Nuovo bilancio"));
+        
+        let body = '';
+        
+        if (bilanci2024.length > 0) {
+          body += "## 🚨 BILANCI 2024 PUBBLICATI\n\n";
+          bilanci2024.forEach(change => {
+            body += `- **${change.nome}** (${change.codice_fiscale}): ${change.valore_nuovo}\n`;
+          });
+          body += "\n";
+        }
+        
+        if (altriBilanci.length > 0) {
+          body += "## 📊 ALTRI BILANCI\n\n";
+          altriBilanci.forEach(change => {
+            body += `- **${change.nome}** (${change.codice_fiscale}): ${change.valore_nuovo}\n`;
+          });
+          body += "\n";
+        }
+        
+        if (altriDocs.length > 0) {
+          body += "## 📄 ALTRI DOCUMENTI\n\n";
+          altriDocs.forEach(change => {
+            body += `- **${change.nome}** (${change.codice_fiscale}): ${change.valore_nuovo}\n`;
+          });
+        }
+        
+        // Personalizza il titolo dell'issue in base alla presenza di bilanci 2024
+        let title = "";
+        if (bilanci2024.length > 0) {
+          title = `🚨 URGENTE: ${bilanci2024.length} bilanci 2024 pubblicati (${new Date().toISOString().split('T')[0]})`;
+        } else {
+          title = `Nuovi documenti RUNTS ${new Date().toISOString().split('T')[0]}`;
+        }
+        
+        await github.rest.issues.create({
+          owner: context.repo.owner,
+          repo: context.repo.repo,
+          title: title,
+          body: body
+        });
+        
+        // Elimina il file di notifica dopo averlo elaborato
+        fs.unlinkSync(filePath);
+      }
     - name: Commit and push updated history
       run: |
         git config --global user.name 'github-actions[bot]'

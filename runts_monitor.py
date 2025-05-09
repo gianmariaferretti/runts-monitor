@@ -352,7 +352,7 @@ def compare_documents(old_data, new_data, nome_ente):
     return changes
 
 def send_notification(changes):
-    """Invia una notifica email con i nuovi documenti"""
+    """Invia una notifica email scritta in modo naturale e professionale"""
     config = load_config()
     recipient_email = config["notifiche"]["email"]
     
@@ -379,75 +379,137 @@ def send_notification(changes):
     
     # Conta il numero di entità con modifiche
     num_entities = len(changes_by_entity)
+    num_balances = sum(len(balances) for balances in new_balances.values())
+    num_other_docs = len(changes) - num_balances
     
     # Crea il messaggio email
-    subject = f"RUNTS Monitor: Nuovi documenti per {num_entities} enti"
+    today = datetime.now().strftime("%d/%m/%Y")
+    
+    # Personalizza l'oggetto in base al contenuto
+    if num_balances > 0:
+        if num_other_docs > 0:
+            subject = f"Aggiornamento RUNTS: {num_balances} nuovi bilanci e altri documenti rilevati"
+        else:
+            subject = f"Aggiornamento RUNTS: {num_balances} nuovi bilanci pubblicati"
+    else:
+        subject = f"Aggiornamento RUNTS: Nuovi documenti disponibili ({today})"
     
     # Prepara il contenuto dell'email
     email_content = f"""
     <html>
     <head>
         <style>
-            body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-            .header {{ background-color: #0056b3; color: white; padding: 20px; text-align: center; }}
-            .summary {{ background-color: #f5f5f5; padding: 15px; margin: 15px 0; border-left: 4px solid #0056b3; }}
-            .entity {{ margin: 30px 0; }}
-            .entity-header {{ background-color: #e9ecef; padding: 10px; border-left: 4px solid #0056b3; }}
-            .new-balance {{ background-color: #d4edda; padding: 10px; margin: 10px 0; border-left: 4px solid #28a745; }}
-            table {{ border-collapse: collapse; width: 100%; margin: 20px 0; }}
-            th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
-            th {{ background-color: #f2f2f2; }}
-            .footer {{ margin-top: 30px; font-size: 12px; color: #666; text-align: center; }}
+            body {{ font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f9f9f9; }}
+            .container {{ max-width: 650px; margin: 20px auto; background-color: #fff; border-radius: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); overflow: hidden; }}
+            .header {{ background-color: #3a6ea5; padding: 25px 30px; color: white; }}
+            .header h1 {{ margin: 0 0 10px 0; font-size: 24px; font-weight: 500; }}
+            .content {{ padding: 30px; }}
+            .intro {{ margin-bottom: 30px; }}
+            .summary {{ background-color: #f5f8fa; padding: 20px; margin: 0 0 30px 0; border-radius: 6px; border-left: 4px solid #3a6ea5; }}
+            h2 {{ font-size: 20px; margin: 0 0 15px 0; color: #2c3e50; font-weight: 500; }}
+            .entity {{ margin: 35px 0; }}
+            .entity-header {{ margin-bottom: 15px; }}
+            .entity-header h3 {{ font-size: 18px; margin: 0 0 5px 0; color: #2c3e50; }}
+            .entity-header p {{ margin: 0; color: #7f8c8d; font-size: 14px; }}
+            .highlight {{ background-color: #e8f4f8; padding: 15px; margin: 15px 0; border-radius: 6px; border-left: 4px solid #2980b9; }}
+            .highlight h4 {{ margin: 0 0 10px 0; color: #2980b9; font-size: 16px; }}
+            .highlight ul {{ margin: 10px 0; padding-left: 25px; }}
+            table {{ border-collapse: collapse; width: 100%; margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
+            th {{ background-color: #f2f2f2; text-align: left; padding: 12px 15px; font-size: 15px; color: #444; font-weight: 500; }}
+            td {{ padding: 10px 15px; border-top: 1px solid #eee; font-size: 14px; }}
+            tr:nth-child(even) {{ background-color: #f9f9f9; }}
+            tr:hover {{ background-color: #f5f5f5; }}
+            .footer {{ padding: 20px 30px; background-color: #f5f8fa; font-size: 14px; color: #7f8c8d; text-align: center; border-top: 1px solid #eee; }}
+            .button {{ display: inline-block; background-color: #3a6ea5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin-top: 10px; }}
         </style>
     </head>
     <body>
-        <div class="header">
-            <h1>Monitor RUNTS: Nuovi Documenti</h1>
-            <p>Data: {datetime.now().strftime("%d/%m/%Y %H:%M")}</p>
-        </div>
-        
-        <div class="summary">
-            <h2>Riepilogo</h2>
-            <p>Sono stati rilevati nuovi documenti per <strong>{num_entities}</strong> enti nel Registro Unico Nazionale del Terzo Settore.</p>
+        <div class="container">
+            <div class="header">
+                <h1>Monitoraggio RUNTS: Nuovi documenti disponibili</h1>
+                <div style="color: #e5e5e5; font-size: 14px;">{today}</div>
+            </div>
+            <div class="content">
+                <div class="intro">
+                    <p>Gentile utente,</p>
+                    <p>durante l'ultimo controllo del Registro Unico Nazionale del Terzo Settore, abbiamo rilevato nuovi documenti pubblicati per alcuni degli enti che stai monitorando.</p>
+                </div>
+                
+                <div class="summary">
+                    <h2>Riepilogo delle novità</h2>
     """
+    
+    # Contenuto del riepilogo
+    if num_balances > 0:
+        if num_balances == 1:
+            email_content += f"<p>È stato pubblicato <strong>1 nuovo bilancio</strong>"
+        else:
+            email_content += f"<p>Sono stati pubblicati <strong>{num_balances} nuovi bilanci</strong>"
+        
+        if num_other_docs > 0:
+            if num_other_docs == 1:
+                email_content += f" e <strong>1 altro documento</strong>"
+            else:
+                email_content += f" e <strong>{num_other_docs} altri documenti</strong>"
+        
+        email_content += f" per un totale di <strong>{num_entities}</strong> enti monitorati.</p>"
+    else:
+        if num_other_docs == 1:
+            email_content += f"<p>È stato pubblicato <strong>1 nuovo documento</strong>"
+        else:
+            email_content += f"<p>Sono stati pubblicati <strong>{num_other_docs} nuovi documenti</strong>"
+        
+        email_content += f" per un totale di <strong>{num_entities}</strong> enti monitorati.</p>"
     
     # Aggiungi sezione nuovi bilanci se presenti
     if new_balances:
         email_content += """
-            <h3>⚠️ NUOVI BILANCI PUBBLICATI:</h3>
-            <ul>
+            <div class="highlight">
+                <h4>📊 Nuovi bilanci pubblicati</h4>
+                <ul>
         """
         for entity, balances in new_balances.items():
             for balance in balances:
                 email_content += f"<li><strong>{entity}</strong>: {balance}</li>"
-        email_content += "</ul>"
+        email_content += """
+                </ul>
+                <p style="margin-top: 15px; font-size: 13px; color: #666;">Ti suggeriamo di prendere visione dei nuovi bilanci il prima possibile per avere un quadro aggiornato della situazione finanziaria degli enti.</p>
+            </div>
+        """
     
-    email_content += "</div>"
+    email_content += "</div>"  # Fine div summary
     
     # Dettagli per ogni ente
     for entity_name, entity_changes in changes_by_entity.items():
         email_content += f"""
         <div class="entity">
             <div class="entity-header">
-                <h2>{entity_name}</h2>
-                <p>Nuovi documenti rilevati: {len(entity_changes)}</p>
+                <h3>{entity_name}</h3>
+                <p>{len(entity_changes)} nuovi documenti disponibili</p>
             </div>
         """
         
+        # Evidenzia i nuovi bilanci, se presenti
+        has_balances = any(change['campo'] == "Nuovo bilancio pubblicato" for change in entity_changes)
+        
         # Tabella con tutti i nuovi documenti
         email_content += """
-            <h3>Documenti pubblicati</h3>
             <table>
                 <tr>
-                    <th>Tipo</th>
-                    <th>Dettagli</th>
+                    <th style="width: 40%;">Documento</th>
+                    <th style="width: 60%;">Dettagli</th>
                 </tr>
         """
         
-        for change in entity_changes:
+        # Prima mostra i bilanci, poi gli altri documenti
+        for change in sorted(entity_changes, key=lambda x: 0 if x['campo'] == "Nuovo bilancio pubblicato" else 1):
+            highlight = ""
+            if change['campo'] == "Nuovo bilancio pubblicato":
+                highlight = "background-color: #e8f4f8;"
+            
             email_content += f"""
-                <tr>
-                    <td>{change['campo']}</td>
+                <tr style="{highlight}">
+                    <td>{"📊 " if change['campo'] == "Nuovo bilancio pubblicato" else "📄 "}{change['campo'].replace("Nuovo ", "").replace(" pubblicato", "")}</td>
                     <td>{change['valore_nuovo']}</td>
                 </tr>
             """
@@ -459,9 +521,17 @@ def send_notification(changes):
     
     # Chiusura email
     email_content += """
-        <div class="footer">
-            <p>Questa è una notifica automatica generata dal sistema di monitoraggio RUNTS.</p>
-            <p>Non rispondere a questa email.</p>
+                <div style="margin-top: 40px;">
+                    <p>I documenti sono disponibili per la consultazione sul portale RUNTS. Puoi accedervi direttamente cercando l'ente di interesse sul <a href="https://servizi.lavoro.gov.it/runts/it-it/Ricerca-enti">sito ufficiale del Registro</a>.</p>
+                    <p>Ti ricordiamo che questo monitoraggio è configurato per controllare regolarmente le variazioni documentali degli enti selezionati.</p>
+                    <p>Cordiali saluti,<br>
+                    Il sistema di monitoraggio RUNTS</p>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Questa comunicazione è stata generata automaticamente dal sistema di monitoraggio RUNTS. Si prega di non rispondere a questa email.</p>
+                <p>Se desideri modificare la configurazione del monitoraggio o aggiungere nuovi enti da controllare, puoi farlo aggiornando il file di configurazione nel repository.</p>
+            </div>
         </div>
     </body>
     </html>

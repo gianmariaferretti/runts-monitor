@@ -317,14 +317,15 @@ async def extract_entity_documents(page, codice_fiscale, nome_ente):
         return entity_data
 
 def compare_documents(old_data, new_data, nome_ente):
-    """Confronta solo i documenti tra i dati vecchi e nuovi dell'ente"""
+    """Confronta i documenti con particolare attenzione ai bilanci 2024"""
     changes = []
+    bilancio_2024_changes = []  # Lista separata per i bilanci 2024
     
     # Ottieni documenti precedenti e attuali
     old_docs = old_data.get("documenti", [])
     new_docs = new_data.get("documenti", [])
     
-    # Crea dizionari per il confronto rapido (usando tipo+codice+anno come chiave)
+    # Crea dizionari per il confronto rapido
     old_docs_dict = {f"{doc['tipo_documento']}_{doc['codice_pratica']}_{doc['anno']}": doc for doc in old_docs}
     
     # Cerca documenti nuovi
@@ -333,26 +334,38 @@ def compare_documents(old_data, new_data, nome_ente):
         
         # Se questo documento non esisteva prima, è nuovo
         if doc_key not in old_docs_dict:
-            # Personalizza il messaggio per i bilanci
-            if "BILANCIO" in doc["tipo_documento"].upper():
-                change_type = "Nuovo bilancio pubblicato"
-                value = f"Bilancio {doc['anno']} (codice: {doc['codice_pratica']})"
-            else:
-                change_type = "Nuovo documento pubblicato"
-                value = f"{doc['tipo_documento']} {doc['anno']} (codice: {doc['codice_pratica']})"
+            is_bilancio = "BILANCIO" in doc["tipo_documento"].upper()
+            year = doc["anno"]
             
-            changes.append({
+            # Crea l'oggetto di modifica
+            change = {
                 "nome": nome_ente,
                 "codice_fiscale": new_data["codice_fiscale"],
-                "campo": change_type,
                 "valore_precedente": "N/A",
-                "valore_nuovo": value
-            })
+            }
+            
+            # Personalizziamo in base al tipo di documento e all'anno
+            if is_bilancio and year == "2024":
+                change["campo"] = "Nuovo bilancio 2024 pubblicato"
+                change["valore_nuovo"] = f"BILANCIO 2024 (codice: {doc['codice_pratica']})"
+                change["priorita"] = "alta"
+                bilancio_2024_changes.append(change)
+            elif is_bilancio:
+                change["campo"] = f"Nuovo bilancio {year} pubblicato"
+                change["valore_nuovo"] = f"Bilancio {year} (codice: {doc['codice_pratica']})"
+                change["priorita"] = "media"
+                changes.append(change)
+            else:
+                change["campo"] = "Nuovo documento pubblicato"
+                change["valore_nuovo"] = f"{doc['tipo_documento']} {year} (codice: {doc['codice_pratica']})"
+                change["priorita"] = "bassa"
+                changes.append(change)
     
-    return changes
+    # Mettiamo i bilanci 2024 all'inizio della lista per dargli massima priorità
+    return bilancio_2024_changes + changes
 
 def send_notification(changes):
-    """Invia una notifica email scritta in modo naturale e professionale"""
+    """Invia una notifica email con evidenza speciale per i bilanci 2024"""
     config = load_config()
     recipient_email = config["notifiche"]["email"]
     
@@ -362,7 +375,8 @@ def send_notification(changes):
     
     # Raggruppa le modifiche per ente
     changes_by_entity = {}
-    new_balances = {}
+    bilanci_2024 = {}
+    altri_bilanci = {}
     
     for change in changes:
         entity_key = f"{change['nome']} ({change['codice_fiscale']})"
@@ -371,26 +385,29 @@ def send_notification(changes):
         
         changes_by_entity[entity_key].append(change)
         
-        # Identifica specificamente i nuovi bilanci
-        if change['campo'] == "Nuovo bilancio pubblicato":
-            if entity_key not in new_balances:
-                new_balances[entity_key] = []
-            new_balances[entity_key].append(change['valore_nuovo'])
+        # Identifica specificamente i bilanci 2024 e gli altri bilanci
+        if change['campo'] == "Nuovo bilancio 2024 pubblicato":
+            if entity_key not in bilanci_2024:
+                bilanci_2024[entity_key] = []
+            bilanci_2024[entity_key].append(change['valore_nuovo'])
+        elif "Nuovo bilancio" in change['campo'] and "pubblicato" in change['campo']:
+            if entity_key not in altri_bilanci:
+                altri_bilanci[entity_key] = []
+            altri_bilanci[entity_key].append(change['valore_nuovo'])
     
-    # Conta il numero di entità con modifiche
+    # Conta il numero di entità con modifiche e bilanci 2024
     num_entities = len(changes_by_entity)
-    num_balances = sum(len(balances) for balances in new_balances.values())
-    num_other_docs = len(changes) - num_balances
+    num_bilanci_2024 = sum(len(bilanci) for bilanci in bilanci_2024.values())
     
     # Crea il messaggio email
     today = datetime.now().strftime("%d/%m/%Y")
     
     # Personalizza l'oggetto in base al contenuto
-    if num_balances > 0:
-        if num_other_docs > 0:
-            subject = f"Aggiornamento RUNTS: {num_balances} nuovi bilanci e altri documenti rilevati"
+    if num_bilanci_2024 > 0:
+        if num_bilanci_2024 == 1:
+            subject = f"URGENTE: Pubblicato 1 bilancio 2024 sul RUNTS ({today})"
         else:
-            subject = f"Aggiornamento RUNTS: {num_balances} nuovi bilanci pubblicati"
+            subject = f"URGENTE: Pubblicati {num_bilanci_2024} bilanci 2024 sul RUNTS ({today})"
     else:
         subject = f"Aggiornamento RUNTS: Nuovi documenti disponibili ({today})"
     
@@ -412,13 +429,17 @@ def send_notification(changes):
             .entity-header h3 {{ font-size: 18px; margin: 0 0 5px 0; color: #2c3e50; }}
             .entity-header p {{ margin: 0; color: #7f8c8d; font-size: 14px; }}
             .highlight {{ background-color: #e8f4f8; padding: 15px; margin: 15px 0; border-radius: 6px; border-left: 4px solid #2980b9; }}
-            .highlight h4 {{ margin: 0 0 10px 0; color: #2980b9; font-size: 16px; }}
-            .highlight ul {{ margin: 10px 0; padding-left: 25px; }}
+            .highlight-urgent {{ background-color: #fff8e8; padding: 15px; margin: 15px 0; border-radius: 6px; border-left: 4px solid #e67e22; }}
+            .highlight h4, .highlight-urgent h4 {{ margin: 0 0 10px 0; font-size: 16px; }}
+            .highlight h4 {{ color: #2980b9; }}
+            .highlight-urgent h4 {{ color: #e67e22; }}
+            .highlight ul, .highlight-urgent ul {{ margin: 10px 0; padding-left: 25px; }}
             table {{ border-collapse: collapse; width: 100%; margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
             th {{ background-color: #f2f2f2; text-align: left; padding: 12px 15px; font-size: 15px; color: #444; font-weight: 500; }}
             td {{ padding: 10px 15px; border-top: 1px solid #eee; font-size: 14px; }}
             tr:nth-child(even) {{ background-color: #f9f9f9; }}
             tr:hover {{ background-color: #f5f5f5; }}
+            .bilancio-2024 {{ background-color: #fff8e8; font-weight: bold; }}
             .footer {{ padding: 20px 30px; background-color: #f5f8fa; font-size: 14px; color: #7f8c8d; text-align: center; border-top: 1px solid #eee; }}
             .button {{ display: inline-block; background-color: #3a6ea5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin-top: 10px; }}
         </style>
@@ -426,54 +447,60 @@ def send_notification(changes):
     <body>
         <div class="container">
             <div class="header">
-                <h1>Monitoraggio RUNTS: Nuovi documenti disponibili</h1>
+                <h1>Monitoraggio RUNTS: {num_bilanci_2024 > 0 ? "BILANCI 2024 PUBBLICATI" : "Nuovi documenti disponibili"}</h1>
                 <div style="color: #e5e5e5; font-size: 14px;">{today}</div>
             </div>
             <div class="content">
                 <div class="intro">
                     <p>Gentile utente,</p>
+    """
+    
+    # Personalizza l'introduzione in base alla presenza di bilanci 2024
+    if num_bilanci_2024 > 0:
+        email_content += f"""
+                    <p>ti avvisiamo che <strong>sono stati pubblicati {num_bilanci_2024} bilanci 2024</strong> sul Registro Unico Nazionale del Terzo Settore per gli enti che stai monitorando.</p>
+                    <p>Ti suggeriamo di prendere visione di questi bilanci il prima possibile.</p>
+        """
+    else:
+        email_content += """
                     <p>durante l'ultimo controllo del Registro Unico Nazionale del Terzo Settore, abbiamo rilevato nuovi documenti pubblicati per alcuni degli enti che stai monitorando.</p>
+        """
+    
+    email_content += """
                 </div>
                 
                 <div class="summary">
                     <h2>Riepilogo delle novità</h2>
     """
     
-    # Contenuto del riepilogo
-    if num_balances > 0:
-        if num_balances == 1:
-            email_content += f"<p>È stato pubblicato <strong>1 nuovo bilancio</strong>"
-        else:
-            email_content += f"<p>Sono stati pubblicati <strong>{num_balances} nuovi bilanci</strong>"
-        
-        if num_other_docs > 0:
-            if num_other_docs == 1:
-                email_content += f" e <strong>1 altro documento</strong>"
-            else:
-                email_content += f" e <strong>{num_other_docs} altri documenti</strong>"
-        
-        email_content += f" per un totale di <strong>{num_entities}</strong> enti monitorati.</p>"
-    else:
-        if num_other_docs == 1:
-            email_content += f"<p>È stato pubblicato <strong>1 nuovo documento</strong>"
-        else:
-            email_content += f"<p>Sono stati pubblicati <strong>{num_other_docs} nuovi documenti</strong>"
-        
-        email_content += f" per un totale di <strong>{num_entities}</strong> enti monitorati.</p>"
-    
-    # Aggiungi sezione nuovi bilanci se presenti
-    if new_balances:
+    # Prima di tutto, evidenzia i bilanci 2024 se presenti
+    if bilanci_2024:
         email_content += """
-            <div class="highlight">
-                <h4>📊 Nuovi bilanci pubblicati</h4>
+            <div class="highlight-urgent">
+                <h4>🚨 BILANCI 2024 PUBBLICATI</h4>
                 <ul>
         """
-        for entity, balances in new_balances.items():
-            for balance in balances:
-                email_content += f"<li><strong>{entity}</strong>: {balance}</li>"
+        for entity, docs in bilanci_2024.items():
+            for doc in docs:
+                email_content += f"<li><strong>{entity}</strong>: {doc}</li>"
         email_content += """
                 </ul>
-                <p style="margin-top: 15px; font-size: 13px; color: #666;">Ti suggeriamo di prendere visione dei nuovi bilanci il prima possibile per avere un quadro aggiornato della situazione finanziaria degli enti.</p>
+                <p style="margin-top: 15px; font-size: 13px; color: #666;"><strong>IMPORTANTE:</strong> Ti invitiamo a consultare al più presto questi bilanci recenti.</p>
+            </div>
+        """
+    
+    # Poi, mostra gli altri bilanci se presenti
+    if altri_bilanci:
+        email_content += """
+            <div class="highlight">
+                <h4>📊 Altri bilanci pubblicati</h4>
+                <ul>
+        """
+        for entity, docs in altri_bilanci.items():
+            for doc in docs:
+                email_content += f"<li><strong>{entity}</strong>: {doc}</li>"
+        email_content += """
+                </ul>
             </div>
         """
     
@@ -489,9 +516,6 @@ def send_notification(changes):
             </div>
         """
         
-        # Evidenzia i nuovi bilanci, se presenti
-        has_balances = any(change['campo'] == "Nuovo bilancio pubblicato" for change in entity_changes)
-        
         # Tabella con tutti i nuovi documenti
         email_content += """
             <table>
@@ -501,15 +525,20 @@ def send_notification(changes):
                 </tr>
         """
         
-        # Prima mostra i bilanci, poi gli altri documenti
-        for change in sorted(entity_changes, key=lambda x: 0 if x['campo'] == "Nuovo bilancio pubblicato" else 1):
-            highlight = ""
-            if change['campo'] == "Nuovo bilancio pubblicato":
-                highlight = "background-color: #e8f4f8;"
+        # Ordina i documenti per priorità
+        for change in sorted(entity_changes, key=lambda x: 0 if "bilancio 2024" in x['campo'].lower() else (1 if "bilancio" in x['campo'].lower() else 2)):
+            css_class = ""
+            prefix = "📄 "
+            
+            if "bilancio 2024" in change['campo'].lower():
+                css_class = "class='bilancio-2024'"
+                prefix = "🚨 "
+            elif "bilancio" in change['campo'].lower():
+                prefix = "📊 "
             
             email_content += f"""
-                <tr style="{highlight}">
-                    <td>{"📊 " if change['campo'] == "Nuovo bilancio pubblicato" else "📄 "}{change['campo'].replace("Nuovo ", "").replace(" pubblicato", "")}</td>
+                <tr {css_class}>
+                    <td>{prefix}{change['campo'].replace("Nuovo ", "").replace(" pubblicato", "")}</td>
                     <td>{change['valore_nuovo']}</td>
                 </tr>
             """

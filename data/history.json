@@ -1,6 +1,6 @@
 {
   "93062320424": {
-    "data_controllo": "2025-05-09 08:23:34",
+    "data_controllo": "2025-05-09 08:41:23",
     "codice_fiscale": "93062320424",
     "dati_base": {
       "denominazione": "UNIONE SPORTIVA ACLI ANCONA aps",
@@ -26,175 +26,118 @@
     },
     "persone": [
       {
-        "numero": "1",
-        "codice_fiscale": "80215550585",
-        "provincia": "AN",
-        "comune": "JESI",
-        "tipo": "CONSIGLIO DIRETTIVO",
-        "rappresentante_legale": "No",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
-        "carica": "VICE PRESIDENTE",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       },
       {
-        "numero": "2",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "ZGGMRC94S09E388G",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
         "provincia": "AN",
-        "comune": "JESI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       },
       {
-        "numero": "3",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "ZGGMRC94S09E388G",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
         "provincia": "AN",
-        "comune": "JESI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       },
       {
-        "numero": "4",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "ZGGMRC94S09E388G",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
         "provincia": "AN",
-        "comune": "JESI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       },
       {
-        "numero": "5",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "ZGGMRC94S09E388G",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
         "provincia": "AN",
-        "comune": "JESI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       },
       {
-        "numero": "6",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "ZGGMRC94S09E388G",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
         "provincia": "AN",
-        "comune": "JESI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       },
       {
-        "numero": "7",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "ZGGMRC94S09E388G",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
         "provincia": "AN",
-        "comune": "JESI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       },
       {
-        "numero": "8",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "ZGGMRC94S09E388G",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
         "provincia": "AN",
-        "comune": "JESI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       },
       {
-        "numero": "9",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "ZGGMRC94S09E388G",
-        "nome": "ATTILIO",
-        "cognome": "PRIORI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
         "data_nascita": "09/11/1994",
         "provincia": "AN",
-        "comune": "JESI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "23/01/2021"
       }
     ],
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2023",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2022",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2021",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ],
-    "volontari": {
-      "lavoratori": "0",
-      "volontari_iscritti": "9",
-      "volontari_enti_aderenti": "0"
-    }
+    "documenti": []
   },
   "93111670662": {
-    "data_controllo": "2025-05-09 08:23:55",
+    "data_controllo": "2025-05-09 08:41:43",
     "codice_fiscale": "93111670662",
     "dati_base": {
       "denominazione": "USACLI AQUILA APS",
@@ -220,129 +163,2985 @@
     },
     "persone": [
       {
-        "numero": "1",
-        "codice_fiscale": "80215550585",
-        "provincia": "AQ",
-        "comune": "SAN DEMETRIO NE' VESTINI",
-        "tipo": "CONSIGLIO DIRETTIVO",
-        "rappresentante_legale": "No",
-        "nome": "MARIO",
-        "cognome": "CENTI",
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
         "data_nascita": "04/07/1949",
-        "carica": "VICE PRESIDENTE",
+        "provincia": "AQ",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "19/01/2022"
       },
       {
-        "numero": "2",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "MLNNRC49L04H819V",
-        "nome": "MARIO",
-        "cognome": "CENTI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
         "data_nascita": "04/07/1949",
         "provincia": "AQ",
-        "comune": "SAN DEMETRIO NE' VESTINI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "19/01/2022"
       },
       {
-        "numero": "3",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "MLNNRC49L04H819V",
-        "nome": "MARIO",
-        "cognome": "CENTI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
         "data_nascita": "04/07/1949",
         "provincia": "AQ",
-        "comune": "SAN DEMETRIO NE' VESTINI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "19/01/2022"
       },
       {
-        "numero": "4",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "MLNNRC49L04H819V",
-        "nome": "MARIO",
-        "cognome": "CENTI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
         "data_nascita": "04/07/1949",
         "provincia": "AQ",
-        "comune": "SAN DEMETRIO NE' VESTINI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "19/01/2022"
       },
       {
-        "numero": "5",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "MLNNRC49L04H819V",
-        "nome": "MARIO",
-        "cognome": "CENTI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
         "data_nascita": "04/07/1949",
         "provincia": "AQ",
-        "comune": "SAN DEMETRIO NE' VESTINI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "19/01/2022"
       },
       {
-        "numero": "6",
         "tipo": "Persona Fisica",
-        "rappresentante_legale": "No",
-        "codice_fiscale": "MLNNRC49L04H819V",
-        "nome": "MARIO",
-        "cognome": "CENTI",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
         "data_nascita": "04/07/1949",
         "provincia": "AQ",
-        "comune": "SAN DEMETRIO NE' VESTINI",
-        "carica": "VICE PRESIDENTE",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
         "data_nomina": "19/01/2022"
       }
     ],
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2023",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2022",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ],
-    "volontari": {
-      "lavoratori": "0",
-      "volontari_iscritti": "6",
-      "volontari_enti_aderenti": "0"
-    }
+    "documenti": []
   },
   "92036200514": {
-    "data_controllo": "2025-05-09 08:24:12",
+    "data_controllo": "2025-05-09 08:42:01",
     "codice_fiscale": "92036200514",
     "dati_base": {},
     "dati_ente": {},
     "sede_legale": {},
     "persone": [],
+    "documenti": []
+  },
+  "92042840055": {
+    "data_controllo": "2025-05-09 08:42:13",
+    "codice_fiscale": "92042840055",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS DI ASTI",
+      "comune": "ASTI",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS DI ASTI",
+      "repertorio": "117216",
+      "codice_fiscale": "92042840055",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLI.ASTI@LEGALMAIL.IT",
+      "atto_costitutivo": "01/01/2000"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "AT",
+      "comune": "ASTI",
+      "indirizzo": "VIA G.CARDUCCI",
+      "civico": "22",
+      "cap": "14100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92042840055",
+        "nome": "SANDRA",
+        "cognome": "FERRERO",
+        "data_nascita": "23/04/1970",
+        "provincia": "AT",
+        "comune": "ASTI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "18/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92042840055",
+        "nome": "SANDRA",
+        "cognome": "FERRERO",
+        "data_nascita": "23/04/1970",
+        "provincia": "AT",
+        "comune": "ASTI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "18/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92042840055",
+        "nome": "SANDRA",
+        "cognome": "FERRERO",
+        "data_nascita": "23/04/1970",
+        "provincia": "AT",
+        "comune": "ASTI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "18/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92042840055",
+        "nome": "SANDRA",
+        "cognome": "FERRERO",
+        "data_nascita": "23/04/1970",
+        "provincia": "AT",
+        "comune": "ASTI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "18/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92042840055",
+        "nome": "SANDRA",
+        "cognome": "FERRERO",
+        "data_nascita": "23/04/1970",
+        "provincia": "AT",
+        "comune": "ASTI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "18/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92042840055",
+        "nome": "SANDRA",
+        "cognome": "FERRERO",
+        "data_nascita": "23/04/1970",
+        "provincia": "AT",
+        "comune": "ASTI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "18/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92042840055",
+        "nome": "SANDRA",
+        "cognome": "FERRERO",
+        "data_nascita": "23/04/1970",
+        "provincia": "AT",
+        "comune": "ASTI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "18/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "92020480627": {
+    "data_controllo": "2025-05-09 08:42:30",
+    "codice_fiscale": "92020480627",
+    "dati_base": {
+      "denominazione": "US ACLI PROVINCIALE DI BENEVENTO APS",
+      "comune": "BENEVENTO",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "US ACLI PROVINCIALE DI BENEVENTO APS",
+      "repertorio": "66877",
+      "codice_fiscale": "92020480627",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLI@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "BN",
+      "comune": "BENEVENTO",
+      "indirizzo": "C.DA PIANO CAPPELLE",
+      "civico": "SNC"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92020480627",
+        "nome": "ANTONIO",
+        "cognome": "MEOLA",
+        "data_nascita": "02/06/1956",
+        "provincia": "BN",
+        "comune": "BENEVENTO",
+        "carica": "CaricaALTRO SPECIFICATO IN POTERI",
+        "data_nomina": "12/01/2024"
+      }
+    ],
+    "documenti": []
+  },
+  "95186450169": {
+    "data_controllo": "2025-05-09 08:42:47",
+    "codice_fiscale": "95186450169",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI BERGAMO APS",
+      "comune": "BERGAMO",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI BERGAMO APS",
+      "repertorio": "89573",
+      "codice_fiscale": "95186450169",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIBERGAMO@PEC.IT",
+      "atto_costitutivo": "26/02/2009"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "BG",
+      "comune": "BERGAMO",
+      "indirizzo": "VIA SAN BERNARDINO",
+      "civico": "59",
+      "cap": "24122"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95186450169",
+        "nome": "ROBERTO",
+        "cognome": "FERRARI",
+        "data_nascita": "21/05/1963",
+        "provincia": "BG",
+        "comune": "BERGAMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "04/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95186450169",
+        "nome": "ROBERTO",
+        "cognome": "FERRARI",
+        "data_nascita": "21/05/1963",
+        "provincia": "BG",
+        "comune": "BERGAMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "04/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95186450169",
+        "nome": "ROBERTO",
+        "cognome": "FERRARI",
+        "data_nascita": "21/05/1963",
+        "provincia": "BG",
+        "comune": "BERGAMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "04/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95186450169",
+        "nome": "ROBERTO",
+        "cognome": "FERRARI",
+        "data_nascita": "21/05/1963",
+        "provincia": "BG",
+        "comune": "BERGAMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "04/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95186450169",
+        "nome": "ROBERTO",
+        "cognome": "FERRARI",
+        "data_nascita": "21/05/1963",
+        "provincia": "BG",
+        "comune": "BERGAMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "04/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95186450169",
+        "nome": "ROBERTO",
+        "cognome": "FERRARI",
+        "data_nascita": "21/05/1963",
+        "provincia": "BG",
+        "comune": "BERGAMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "04/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95186450169",
+        "nome": "ROBERTO",
+        "cognome": "FERRARI",
+        "data_nascita": "21/05/1963",
+        "provincia": "BG",
+        "comune": "BERGAMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "04/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "90057120025": {
+    "data_controllo": "2025-05-09 08:43:04",
+    "codice_fiscale": "90057120025",
+    "dati_base": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI APS DI BIELLA",
+      "comune": "BIELLA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI APS DI BIELLA",
+      "repertorio": "111615",
+      "codice_fiscale": "90057120025",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLI.BIELLA@PEC.IT",
+      "atto_costitutivo": "01/01/1970"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "BI",
+      "comune": "BIELLA",
+      "indirizzo": "VIA ORFANATROFIO",
+      "civico": "16",
+      "cap": "13900"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90057120025",
+        "nome": "PAOLO",
+        "cognome": "GAVIOLI",
+        "data_nascita": "08/02/1982",
+        "provincia": "BI",
+        "comune": "BIELLA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/04/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90057120025",
+        "nome": "PAOLO",
+        "cognome": "GAVIOLI",
+        "data_nascita": "08/02/1982",
+        "provincia": "BI",
+        "comune": "BIELLA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/04/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90057120025",
+        "nome": "PAOLO",
+        "cognome": "GAVIOLI",
+        "data_nascita": "08/02/1982",
+        "provincia": "BI",
+        "comune": "BIELLA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/04/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90057120025",
+        "nome": "PAOLO",
+        "cognome": "GAVIOLI",
+        "data_nascita": "08/02/1982",
+        "provincia": "BI",
+        "comune": "BIELLA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/04/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90057120025",
+        "nome": "PAOLO",
+        "cognome": "GAVIOLI",
+        "data_nascita": "08/02/1982",
+        "provincia": "BI",
+        "comune": "BIELLA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/04/2022"
+      }
+    ],
+    "documenti": []
+  },
+  "92017850378": {
+    "data_controllo": "2025-05-09 08:43:22",
+    "codice_fiscale": "92017850378",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS",
+      "comune": "BOLOGNA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS",
+      "repertorio": "57418",
+      "codice_fiscale": "92017850378",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "ACLIBO@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "BO",
+      "comune": "BOLOGNA",
+      "indirizzo": "VIA DELLE LAME",
+      "civico": "116",
+      "cap": "40122"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92017850378",
+        "nome": "FRANCESCO",
+        "cognome": "MANFREDI",
+        "data_nascita": "23/12/1982",
+        "provincia": "BO",
+        "comune": "BOLOGNA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92017850378",
+        "nome": "FRANCESCO",
+        "cognome": "MANFREDI",
+        "data_nascita": "23/12/1982",
+        "provincia": "BO",
+        "comune": "BOLOGNA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92017850378",
+        "nome": "FRANCESCO",
+        "cognome": "MANFREDI",
+        "data_nascita": "23/12/1982",
+        "provincia": "BO",
+        "comune": "BOLOGNA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92017850378",
+        "nome": "FRANCESCO",
+        "cognome": "MANFREDI",
+        "data_nascita": "23/12/1982",
+        "provincia": "BO",
+        "comune": "BOLOGNA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92017850378",
+        "nome": "FRANCESCO",
+        "cognome": "MANFREDI",
+        "data_nascita": "23/12/1982",
+        "provincia": "BO",
+        "comune": "BOLOGNA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92017850378",
+        "nome": "FRANCESCO",
+        "cognome": "MANFREDI",
+        "data_nascita": "23/12/1982",
+        "provincia": "BO",
+        "comune": "BOLOGNA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      }
+    ],
+    "documenti": []
+  },
+  "98007270782": {
+    "data_controllo": "2025-05-09 08:43:40",
+    "codice_fiscale": "98007270782",
+    "dati_base": {
+      "denominazione": "USACLI - UNIONE SPORTIVA ACLI REGIONALE CALABRIA APS",
+      "comune": "COSENZA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "USACLI - UNIONE SPORTIVA ACLI REGIONALE CALABRIA APS",
+      "repertorio": "95194",
+      "codice_fiscale": "98007270782",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLICALABRIAAPS@NAMIRIALPEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "CS",
+      "comune": "COSENZA",
+      "indirizzo": "VIA COSCARELLA",
+      "civico": "28",
+      "cap": "87100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "98007270782",
+        "nome": "PIERFRANCESCO",
+        "cognome": "DE NAPOLI",
+        "data_nascita": "05/05/1971",
+        "provincia": "CS",
+        "comune": "COSENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/03/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "98007270782",
+        "nome": "PIERFRANCESCO",
+        "cognome": "DE NAPOLI",
+        "data_nascita": "05/05/1971",
+        "provincia": "CS",
+        "comune": "COSENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/03/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "98007270782",
+        "nome": "PIERFRANCESCO",
+        "cognome": "DE NAPOLI",
+        "data_nascita": "05/05/1971",
+        "provincia": "CS",
+        "comune": "COSENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/03/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "98007270782",
+        "nome": "PIERFRANCESCO",
+        "cognome": "DE NAPOLI",
+        "data_nascita": "05/05/1971",
+        "provincia": "CS",
+        "comune": "COSENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/03/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "98007270782",
+        "nome": "PIERFRANCESCO",
+        "cognome": "DE NAPOLI",
+        "data_nascita": "05/05/1971",
+        "provincia": "CS",
+        "comune": "COSENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/03/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "93037790875": {
+    "data_controllo": "2025-05-09 08:43:57",
+    "codice_fiscale": "93037790875",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI CATANIA A.P.S.",
+      "comune": "CATANIA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI CATANIA A.P.S.",
+      "repertorio": "84628",
+      "codice_fiscale": "93037790875",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLICATANIA@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "CT",
+      "comune": "CATANIA",
+      "indirizzo": "CORSO SICILIA",
+      "civico": "111",
+      "cap": "95131"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93037790875",
+        "nome": "FRANCESCO",
+        "cognome": "TOSTO",
+        "data_nascita": "30/07/1949",
+        "provincia": "CT",
+        "comune": "CATANIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93037790875",
+        "nome": "FRANCESCO",
+        "cognome": "TOSTO",
+        "data_nascita": "30/07/1949",
+        "provincia": "CT",
+        "comune": "CATANIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93037790875",
+        "nome": "FRANCESCO",
+        "cognome": "TOSTO",
+        "data_nascita": "30/07/1949",
+        "provincia": "CT",
+        "comune": "CATANIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93037790875",
+        "nome": "FRANCESCO",
+        "cognome": "TOSTO",
+        "data_nascita": "30/07/1949",
+        "provincia": "CT",
+        "comune": "CATANIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "10/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "97015130798": {
+    "data_controllo": "2025-05-09 08:44:14",
+    "codice_fiscale": "97015130798",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI PROVINCIALE CATANZARO APS",
+      "comune": "CATANZARO",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI PROVINCIALE CATANZARO APS",
+      "repertorio": "95236",
+      "codice_fiscale": "97015130798",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIAPSCATANZARO@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "CZ",
+      "comune": "CATANZARO",
+      "indirizzo": "PIAZZA F. STOCCO",
+      "civico": "5",
+      "cap": "88100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97015130798",
+        "nome": "FRANCESCO",
+        "cognome": "GUZZI",
+        "data_nascita": "17/02/1962",
+        "provincia": "CZ",
+        "comune": "CATANZARO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97015130798",
+        "nome": "FRANCESCO",
+        "cognome": "GUZZI",
+        "data_nascita": "17/02/1962",
+        "provincia": "CZ",
+        "comune": "CATANZARO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97015130798",
+        "nome": "FRANCESCO",
+        "cognome": "GUZZI",
+        "data_nascita": "17/02/1962",
+        "provincia": "CZ",
+        "comune": "CATANZARO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97015130798",
+        "nome": "FRANCESCO",
+        "cognome": "GUZZI",
+        "data_nascita": "17/02/1962",
+        "provincia": "CZ",
+        "comune": "CATANZARO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "94177950485": {
+    "data_controllo": "2025-05-09 08:44:32",
+    "codice_fiscale": "94177950485",
+    "dati_base": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI FIRENZE APS",
+      "comune": "FIRENZE",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI FIRENZE APS",
+      "repertorio": "67160",
+      "codice_fiscale": "94177950485",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "ACLI.FIRENZE@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "FI",
+      "comune": "FIRENZE",
+      "indirizzo": "PIAZZA CASTELLO",
+      "civico": "4",
+      "cap": "50144"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94177950485",
+        "nome": "EMILIA",
+        "cognome": "BIAGINI",
+        "data_nascita": "04/08/1961",
+        "provincia": "FI",
+        "comune": "FIRENZE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "03/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94177950485",
+        "nome": "EMILIA",
+        "cognome": "BIAGINI",
+        "data_nascita": "04/08/1961",
+        "provincia": "FI",
+        "comune": "FIRENZE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "03/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94177950485",
+        "nome": "EMILIA",
+        "cognome": "BIAGINI",
+        "data_nascita": "04/08/1961",
+        "provincia": "FI",
+        "comune": "FIRENZE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "03/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94177950485",
+        "nome": "EMILIA",
+        "cognome": "BIAGINI",
+        "data_nascita": "04/08/1961",
+        "provincia": "FI",
+        "comune": "FIRENZE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "03/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94177950485",
+        "nome": "EMILIA",
+        "cognome": "BIAGINI",
+        "data_nascita": "04/08/1961",
+        "provincia": "FI",
+        "comune": "FIRENZE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "03/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94177950485",
+        "nome": "EMILIA",
+        "cognome": "BIAGINI",
+        "data_nascita": "04/08/1961",
+        "provincia": "FI",
+        "comune": "FIRENZE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "03/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94177950485",
+        "nome": "EMILIA",
+        "cognome": "BIAGINI",
+        "data_nascita": "04/08/1961",
+        "provincia": "FI",
+        "comune": "FIRENZE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "03/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "95068380104": {
+    "data_controllo": "2025-05-09 08:44:49",
+    "codice_fiscale": "95068380104",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS GENOVA",
+      "comune": "GENOVA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS GENOVA",
+      "repertorio": "91015",
+      "codice_fiscale": "95068380104",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIGE@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "GE",
+      "comune": "GENOVA",
+      "indirizzo": "VICO FALAMONICA 1/7",
+      "civico": "7",
+      "cap": "16123"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95068380104",
+        "nome": "MONICA",
+        "cognome": "BACIGALUPO",
+        "data_nascita": "01/02/1970",
+        "provincia": "GE",
+        "comune": "GENOVA",
+        "carica": "CaricaPRESIDENTE ORG. DI AMMINISTRAZIONE",
+        "data_nomina": "09/01/2025"
+      }
+    ],
+    "documenti": []
+  },
+  "91000430594": {
+    "data_controllo": "2025-05-09 08:45:07",
+    "codice_fiscale": "91000430594",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS PROVINCIALE DI LATINA",
+      "comune": "LATINA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS PROVINCIALE DI LATINA",
+      "repertorio": "112963",
+      "codice_fiscale": "91000430594",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLILATINA@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "LT",
+      "comune": "LATINA",
+      "indirizzo": "VIALE 18 DICEMBRE",
+      "civico": "43",
+      "cap": "04100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91000430594",
+        "nome": "ANNA MARIA",
+        "cognome": "TUFANO",
+        "data_nascita": "18/09/1966",
+        "provincia": "LT",
+        "comune": "LATINA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91000430594",
+        "nome": "ANNA MARIA",
+        "cognome": "TUFANO",
+        "data_nascita": "18/09/1966",
+        "provincia": "LT",
+        "comune": "LATINA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91000430594",
+        "nome": "ANNA MARIA",
+        "cognome": "TUFANO",
+        "data_nascita": "18/09/1966",
+        "provincia": "LT",
+        "comune": "LATINA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91000430594",
+        "nome": "ANNA MARIA",
+        "cognome": "TUFANO",
+        "data_nascita": "18/09/1966",
+        "provincia": "LT",
+        "comune": "LATINA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/01/2023"
+      }
+    ],
+    "documenti": []
+  },
+  "93012430752": {
+    "data_controllo": "2025-05-09 08:45:24",
+    "codice_fiscale": "93012430752",
+    "dati_base": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI APS LECCE",
+      "comune": "LECCE",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI APS LECCE",
+      "repertorio": "116667",
+      "codice_fiscale": "93012430752",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLILECCE@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "LE",
+      "comune": "LECCE",
+      "indirizzo": "VIA GIISEPPE ACCLAVIO",
+      "civico": "74",
+      "cap": "73100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93012430752",
+        "nome": "SILVIA",
+        "cognome": "DE DONNO",
+        "data_nascita": "19/04/1991",
+        "provincia": "LE",
+        "comune": "LECCE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "01/10/2012"
+      }
+    ],
+    "documenti": []
+  },
+  "92531620158": {
+    "data_controllo": "2025-05-09 08:45:42",
+    "codice_fiscale": "92531620158",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROV. LODI APS",
+      "comune": "LODI",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROV. LODI APS",
+      "repertorio": "114062",
+      "codice_fiscale": "92531620158",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLI.LODI@PEC.RETEACLI.IT",
+      "atto_costitutivo": "28/10/1997"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "LO",
+      "comune": "LODI",
+      "indirizzo": "VIALE RIMEMBRANZE",
+      "civico": "12/B",
+      "cap": "26900"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92531620158",
+        "nome": "ISABELLE",
+        "cognome": "LEMAL",
+        "data_nascita": "05/01/1949",
+        "provincia": "LO",
+        "comune": "LODI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "31/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92531620158",
+        "nome": "ISABELLE",
+        "cognome": "LEMAL",
+        "data_nascita": "05/01/1949",
+        "provincia": "LO",
+        "comune": "LODI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "31/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92531620158",
+        "nome": "ISABELLE",
+        "cognome": "LEMAL",
+        "data_nascita": "05/01/1949",
+        "provincia": "LO",
+        "comune": "LODI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "31/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92531620158",
+        "nome": "ISABELLE",
+        "cognome": "LEMAL",
+        "data_nascita": "05/01/1949",
+        "provincia": "LO",
+        "comune": "LODI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "31/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92531620158",
+        "nome": "ISABELLE",
+        "cognome": "LEMAL",
+        "data_nascita": "05/01/1949",
+        "provincia": "LO",
+        "comune": "LODI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "31/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "80013980463": {
+    "data_controllo": "2025-05-09 08:46:00",
+    "codice_fiscale": "80013980463",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI LUCCA APS",
+      "comune": "CAPANNORI",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI LUCCA APS",
+      "repertorio": "67200",
+      "codice_fiscale": "80013980463",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLILUCCA@PEC.IT",
+      "atto_costitutivo": "14/10/1984"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "LU",
+      "comune": "CAPANNORI",
+      "indirizzo": "VIA DEL PARCO",
+      "civico": "5"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80013980463",
+        "nome": "GIOVANNI",
+        "cognome": "BOLOGNINI",
+        "data_nascita": "22/05/1956",
+        "provincia": "LU",
+        "comune": "CAPANNORI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "13/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80013980463",
+        "nome": "GIOVANNI",
+        "cognome": "BOLOGNINI",
+        "data_nascita": "22/05/1956",
+        "provincia": "LU",
+        "comune": "CAPANNORI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "13/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80013980463",
+        "nome": "GIOVANNI",
+        "cognome": "BOLOGNINI",
+        "data_nascita": "22/05/1956",
+        "provincia": "LU",
+        "comune": "CAPANNORI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "13/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80013980463",
+        "nome": "GIOVANNI",
+        "cognome": "BOLOGNINI",
+        "data_nascita": "22/05/1956",
+        "provincia": "LU",
+        "comune": "CAPANNORI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "13/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80013980463",
+        "nome": "GIOVANNI",
+        "cognome": "BOLOGNINI",
+        "data_nascita": "22/05/1956",
+        "provincia": "LU",
+        "comune": "CAPANNORI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "13/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80013980463",
+        "nome": "GIOVANNI",
+        "cognome": "BOLOGNINI",
+        "data_nascita": "22/05/1956",
+        "provincia": "LU",
+        "comune": "CAPANNORI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "13/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80013980463",
+        "nome": "GIOVANNI",
+        "cognome": "BOLOGNINI",
+        "data_nascita": "22/05/1956",
+        "provincia": "LU",
+        "comune": "CAPANNORI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "13/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "1424190435": {
+    "data_controllo": "2025-05-09 08:46:17",
+    "codice_fiscale": "1424190435",
+    "dati_base": {},
+    "dati_ente": {},
+    "sede_legale": {},
+    "persone": [],
+    "documenti": []
+  },
+  "3103400366": {
+    "data_controllo": "2025-05-09 08:46:29",
+    "codice_fiscale": "3103400366",
+    "dati_base": {},
+    "dati_ente": {},
+    "sede_legale": {},
+    "persone": [],
+    "documenti": []
+  },
+  "80008130546": {
+    "data_controllo": "2025-05-09 08:46:41",
+    "codice_fiscale": "80008130546",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS COMITATO DI PERUGIA",
+      "comune": "PERUGIA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS COMITATO DI PERUGIA",
+      "repertorio": "110619",
+      "codice_fiscale": "80008130546",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "PERUGIA.US@PEC.RETEACLI.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "PG",
+      "comune": "PERUGIA",
+      "indirizzo": "VIA SICILIA",
+      "civico": "57",
+      "cap": "06128"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80008130546",
+        "nome": "CARLO",
+        "cognome": "MORETTI",
+        "data_nascita": "11/04/1971",
+        "provincia": "PG",
+        "comune": "PERUGIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/10/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80008130546",
+        "nome": "CARLO",
+        "cognome": "MORETTI",
+        "data_nascita": "11/04/1971",
+        "provincia": "PG",
+        "comune": "PERUGIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/10/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80008130546",
+        "nome": "CARLO",
+        "cognome": "MORETTI",
+        "data_nascita": "11/04/1971",
+        "provincia": "PG",
+        "comune": "PERUGIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/10/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80008130546",
+        "nome": "CARLO",
+        "cognome": "MORETTI",
+        "data_nascita": "11/04/1971",
+        "provincia": "PG",
+        "comune": "PERUGIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/10/2023"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80008130546",
+        "nome": "CARLO",
+        "cognome": "MORETTI",
+        "data_nascita": "11/04/1971",
+        "provincia": "PG",
+        "comune": "PERUGIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "28/10/2023"
+      }
+    ],
+    "documenti": []
+  },
+  "91033340331": {
+    "data_controllo": "2025-05-09 08:46:58",
+    "codice_fiscale": "91033340331",
+    "dati_base": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI APS",
+      "comune": "PIACENZA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI APS",
+      "repertorio": "57445",
+      "codice_fiscale": "91033340331",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIPIACENZA@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "PC",
+      "comune": "PIACENZA",
+      "indirizzo": "VIA BEVERORA",
+      "civico": "18/B",
+      "cap": "29121"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91033340331",
+        "nome": "MARIAM",
+        "cognome": "JOSEPH TAMSEEL",
+        "data_nascita": "12/07/1982",
+        "provincia": "PC",
+        "comune": "PIACENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91033340331",
+        "nome": "MARIAM",
+        "cognome": "JOSEPH TAMSEEL",
+        "data_nascita": "12/07/1982",
+        "provincia": "PC",
+        "comune": "PIACENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91033340331",
+        "nome": "MARIAM",
+        "cognome": "JOSEPH TAMSEEL",
+        "data_nascita": "12/07/1982",
+        "provincia": "PC",
+        "comune": "PIACENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91033340331",
+        "nome": "MARIAM",
+        "cognome": "JOSEPH TAMSEEL",
+        "data_nascita": "12/07/1982",
+        "provincia": "PC",
+        "comune": "PIACENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91033340331",
+        "nome": "MARIAM",
+        "cognome": "JOSEPH TAMSEEL",
+        "data_nascita": "12/07/1982",
+        "provincia": "PC",
+        "comune": "PIACENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91033340331",
+        "nome": "MARIAM",
+        "cognome": "JOSEPH TAMSEEL",
+        "data_nascita": "12/07/1982",
+        "provincia": "PC",
+        "comune": "PIACENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "97509140014": {
+    "data_controllo": "2025-05-09 08:47:16",
+    "codice_fiscale": "97509140014",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI PIEMONTE",
+      "comune": "TORINO",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI PIEMONTE",
+      "repertorio": "63703",
+      "codice_fiscale": "97509140014",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIPIEMONTE@ARUBAPEC.IT",
+      "atto_costitutivo": "05/07/1986"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "TO",
+      "comune": "TORINO",
+      "indirizzo": "PIAZZA STATUTO",
+      "civico": "12",
+      "cap": "10122"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97509140014",
+        "nome": "FAUSTO",
+        "cognome": "COSTERO",
+        "data_nascita": "01/01/1951",
+        "provincia": "TO",
+        "comune": "TORINO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "27/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "91173280354": {
+    "data_controllo": "2025-05-09 08:47:33",
+    "codice_fiscale": "91173280354",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO REGGIO EMILIA A.P.S.",
+      "comune": "REGGIO NELL'EMILIA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO REGGIO EMILIA A.P.S.",
+      "repertorio": "57415",
+      "codice_fiscale": "91173280354",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIRE@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "RE",
+      "comune": "REGGIO NELL'EMILIA",
+      "indirizzo": "VIA MONTEFIORINO",
+      "civico": "10/1",
+      "cap": "42123"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91173280354",
+        "nome": "EUGENIO",
+        "cognome": "AMOROSI",
+        "data_nascita": "06/08/1966",
+        "provincia": "RE",
+        "comune": "REGGIO NELL'EMILIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91173280354",
+        "nome": "EUGENIO",
+        "cognome": "AMOROSI",
+        "data_nascita": "06/08/1966",
+        "provincia": "RE",
+        "comune": "REGGIO NELL'EMILIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91173280354",
+        "nome": "EUGENIO",
+        "cognome": "AMOROSI",
+        "data_nascita": "06/08/1966",
+        "provincia": "RE",
+        "comune": "REGGIO NELL'EMILIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91173280354",
+        "nome": "EUGENIO",
+        "cognome": "AMOROSI",
+        "data_nascita": "06/08/1966",
+        "provincia": "RE",
+        "comune": "REGGIO NELL'EMILIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91173280354",
+        "nome": "EUGENIO",
+        "cognome": "AMOROSI",
+        "data_nascita": "06/08/1966",
+        "provincia": "RE",
+        "comune": "REGGIO NELL'EMILIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91173280354",
+        "nome": "EUGENIO",
+        "cognome": "AMOROSI",
+        "data_nascita": "06/08/1966",
+        "provincia": "RE",
+        "comune": "REGGIO NELL'EMILIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "91173280354",
+        "nome": "EUGENIO",
+        "cognome": "AMOROSI",
+        "data_nascita": "06/08/1966",
+        "provincia": "RE",
+        "comune": "REGGIO NELL'EMILIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "92041680908": {
+    "data_controllo": "2025-05-09 08:47:51",
+    "codice_fiscale": "92041680908",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS (US ACLI APS)",
+      "comune": "SASSARI",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS (US ACLI APS)",
+      "repertorio": "100888",
+      "codice_fiscale": "92041680908",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLISASSARI@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "SS",
+      "comune": "SASSARI",
+      "indirizzo": "VIA ROMA",
+      "civico": "130",
+      "cap": "07100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92041680908",
+        "nome": "ANTONELLO",
+        "cognome": "LUIU",
+        "data_nascita": "05/11/1976",
+        "provincia": "SS",
+        "comune": "SASSARI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "12/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "97194070823": {
+    "data_controllo": "2025-05-09 08:48:08",
+    "codice_fiscale": "97194070823",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS SICILIA",
+      "comune": "PALERMO",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS SICILIA",
+      "repertorio": "132152",
+      "codice_fiscale": "97194070823",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLISICILIA@PEC.BUFFETTI.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "PA",
+      "comune": "PALERMO",
+      "indirizzo": "VIA FRANCESCO CRISPI",
+      "civico": "120",
+      "cap": "90122"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97194070823",
+        "nome": "STEFANO",
+        "cognome": "URSO",
+        "data_nascita": "27/04/1961",
+        "provincia": "PA",
+        "comune": "PALERMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "14/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97194070823",
+        "nome": "STEFANO",
+        "cognome": "URSO",
+        "data_nascita": "27/04/1961",
+        "provincia": "PA",
+        "comune": "PALERMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "14/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97194070823",
+        "nome": "STEFANO",
+        "cognome": "URSO",
+        "data_nascita": "27/04/1961",
+        "provincia": "PA",
+        "comune": "PALERMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "14/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97194070823",
+        "nome": "STEFANO",
+        "cognome": "URSO",
+        "data_nascita": "27/04/1961",
+        "provincia": "PA",
+        "comune": "PALERMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "14/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97194070823",
+        "nome": "STEFANO",
+        "cognome": "URSO",
+        "data_nascita": "27/04/1961",
+        "provincia": "PA",
+        "comune": "PALERMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "14/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97194070823",
+        "nome": "STEFANO",
+        "cognome": "URSO",
+        "data_nascita": "27/04/1961",
+        "provincia": "PA",
+        "comune": "PALERMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "14/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97194070823",
+        "nome": "STEFANO",
+        "cognome": "URSO",
+        "data_nascita": "27/04/1961",
+        "provincia": "PA",
+        "comune": "PALERMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "14/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "97194070823",
+        "nome": "STEFANO",
+        "cognome": "URSO",
+        "data_nascita": "27/04/1961",
+        "provincia": "PA",
+        "comune": "PALERMO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "14/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "92075490521": {
+    "data_controllo": "2025-05-09 08:48:26",
+    "codice_fiscale": "92075490521",
+    "dati_base": {
+      "denominazione": "US ACLI SIENA APS",
+      "comune": "SIENA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "US ACLI SIENA APS",
+      "repertorio": "84267",
+      "codice_fiscale": "92075490521",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "SIENA.USACLI@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "SI",
+      "comune": "SIENA",
+      "indirizzo": "PIAZZA LA LIZZA",
+      "civico": "2",
+      "cap": "53100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "92075490521",
+        "nome": "KRIS",
+        "cognome": "CIPRIANI",
+        "data_nascita": "09/11/1988",
+        "provincia": "SI",
+        "comune": "SIENA",
+        "carica": "CaricaALTRO SPECIFICATO IN POTERI",
+        "data_nomina": "15/06/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "93035600894": {
+    "data_controllo": "2025-05-09 08:48:43",
+    "codice_fiscale": "93035600894",
+    "dati_base": {
+      "denominazione": "US ACLI APS SIRACUSA",
+      "comune": "SIRACUSA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "US ACLI APS SIRACUSA",
+      "repertorio": "67858",
+      "codice_fiscale": "93035600894",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLI.SIRACUSA@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "SR",
+      "comune": "SIRACUSA",
+      "indirizzo": "VIA DEMOSTENE",
+      "civico": "1",
+      "cap": "96100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93035600894",
+        "nome": "SEBASTIANO",
+        "cognome": "CAMPISI",
+        "data_nascita": "25/07/1981",
+        "provincia": "SR",
+        "comune": "SIRACUSA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93035600894",
+        "nome": "SEBASTIANO",
+        "cognome": "CAMPISI",
+        "data_nascita": "25/07/1981",
+        "provincia": "SR",
+        "comune": "SIRACUSA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93035600894",
+        "nome": "SEBASTIANO",
+        "cognome": "CAMPISI",
+        "data_nascita": "25/07/1981",
+        "provincia": "SR",
+        "comune": "SIRACUSA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93035600894",
+        "nome": "SEBASTIANO",
+        "cognome": "CAMPISI",
+        "data_nascita": "25/07/1981",
+        "provincia": "SR",
+        "comune": "SIRACUSA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93035600894",
+        "nome": "SEBASTIANO",
+        "cognome": "CAMPISI",
+        "data_nascita": "25/07/1981",
+        "provincia": "SR",
+        "comune": "SIRACUSA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93035600894",
+        "nome": "SEBASTIANO",
+        "cognome": "CAMPISI",
+        "data_nascita": "25/07/1981",
+        "provincia": "SR",
+        "comune": "SIRACUSA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93035600894",
+        "nome": "SEBASTIANO",
+        "cognome": "CAMPISI",
+        "data_nascita": "25/07/1981",
+        "provincia": "SR",
+        "comune": "SIRACUSA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/01/2022"
+      }
+    ],
+    "documenti": []
+  },
+  "80029110261": {
+    "data_controllo": "2025-05-09 08:49:01",
+    "codice_fiscale": "80029110261",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS TREVISO",
+      "comune": "TREVISO",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS TREVISO",
+      "repertorio": "102812",
+      "codice_fiscale": "80029110261",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLITREVISO@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "TV",
+      "comune": "TREVISO",
+      "indirizzo": "VIA DELLA REPUBBLICA",
+      "civico": "193/A",
+      "cap": "31100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "80029110261",
+        "nome": "CLAUDIA",
+        "cognome": "CERON",
+        "data_nascita": "19/03/1963",
+        "provincia": "TV",
+        "comune": "TREVISO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "94033170302": {
+    "data_controllo": "2025-05-09 08:49:18",
+    "codice_fiscale": "94033170302",
+    "dati_base": {},
+    "dati_ente": {},
+    "sede_legale": {},
+    "persone": [],
+    "documenti": []
+  },
+  "2707951204": {
+    "data_controllo": "2025-05-09 08:49:30",
+    "codice_fiscale": "2707951204",
+    "dati_base": {},
+    "dati_ente": {},
+    "sede_legale": {},
+    "persone": [],
+    "documenti": []
+  },
+  "95032770125": {
+    "data_controllo": "2025-05-09 08:49:42",
+    "codice_fiscale": "95032770125",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS PROVINCIALE VARESE",
+      "comune": "VARESE",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI APS PROVINCIALE VARESE",
+      "repertorio": "86563",
+      "codice_fiscale": "95032770125",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIVARESE@ARUBAPEC.IT",
+      "atto_costitutivo": "01/01/1989"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "VA",
+      "comune": "VARESE",
+      "indirizzo": "VIA SPERI DELLA CHIESA",
+      "civico": "7/9",
+      "cap": "21100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95032770125",
+        "nome": "MARIA",
+        "cognome": "LOGOZZI",
+        "data_nascita": "15/10/1954",
+        "provincia": "VA",
+        "comune": "VARESE",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "05/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "94005260271": {
+    "data_controllo": "2025-05-09 08:49:59",
+    "codice_fiscale": "94005260271",
+    "dati_base": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI VENEZIA APS",
+      "comune": "VENEZIA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "COMITATO PROVINCIALE US ACLI VENEZIA APS",
+      "repertorio": "102810",
+      "codice_fiscale": "94005260271",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIVENEZIA@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "VE",
+      "comune": "VENEZIA",
+      "indirizzo": "VIA ULLOA",
+      "civico": "3/A",
+      "cap": "30175"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94005260271",
+        "nome": "MAURO",
+        "cognome": "FAVARON",
+        "data_nascita": "23/07/1973",
+        "provincia": "VE",
+        "comune": "VENEZIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "15/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94005260271",
+        "nome": "MAURO",
+        "cognome": "FAVARON",
+        "data_nascita": "23/07/1973",
+        "provincia": "VE",
+        "comune": "VENEZIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "15/02/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94005260271",
+        "nome": "MAURO",
+        "cognome": "FAVARON",
+        "data_nascita": "23/07/1973",
+        "provincia": "VE",
+        "comune": "VENEZIA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "15/02/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "94014660024": {
+    "data_controllo": "2025-05-09 08:50:17",
+    "codice_fiscale": "94014660024",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA A.C.L.I. PROVINCIALE - APS",
+      "comune": "VERCELLI",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA A.C.L.I. PROVINCIALE - APS",
+      "repertorio": "97761",
+      "codice_fiscale": "94014660024",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "COMITATOUSACLIVERCELLI@LEGALMAIL.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "VC",
+      "comune": "VERCELLI",
+      "indirizzo": "VIA PIERO GOBETTI",
+      "civico": "1",
+      "cap": "13100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94014660024",
+        "nome": "ORNELLA",
+        "cognome": "GRAZIO",
+        "data_nascita": "09/10/1952",
+        "provincia": "VC",
+        "comune": "VERCELLI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94014660024",
+        "nome": "ORNELLA",
+        "cognome": "GRAZIO",
+        "data_nascita": "09/10/1952",
+        "provincia": "VC",
+        "comune": "VERCELLI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94014660024",
+        "nome": "ORNELLA",
+        "cognome": "GRAZIO",
+        "data_nascita": "09/10/1952",
+        "provincia": "VC",
+        "comune": "VERCELLI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94014660024",
+        "nome": "ORNELLA",
+        "cognome": "GRAZIO",
+        "data_nascita": "09/10/1952",
+        "provincia": "VC",
+        "comune": "VERCELLI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94014660024",
+        "nome": "ORNELLA",
+        "cognome": "GRAZIO",
+        "data_nascita": "09/10/1952",
+        "provincia": "VC",
+        "comune": "VERCELLI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "94014660024",
+        "nome": "ORNELLA",
+        "cognome": "GRAZIO",
+        "data_nascita": "09/10/1952",
+        "provincia": "VC",
+        "comune": "VERCELLI",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "95101640241": {
+    "data_controllo": "2025-05-09 08:50:35",
+    "codice_fiscale": "95101640241",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI VICENZA APS",
+      "comune": "VICENZA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI VICENZA APS",
+      "repertorio": "102811",
+      "codice_fiscale": "95101640241",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "VICENZA.USACLI@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "VI",
+      "comune": "VICENZA",
+      "indirizzo": "VIA ENRICO FERMI",
+      "civico": "203",
+      "cap": "36100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95101640241",
+        "nome": "PIERPAOLO",
+        "cognome": "VISSA'",
+        "data_nascita": "10/10/1978",
+        "provincia": "VI",
+        "comune": "VICENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "21/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95101640241",
+        "nome": "PIERPAOLO",
+        "cognome": "VISSA'",
+        "data_nascita": "10/10/1978",
+        "provincia": "VI",
+        "comune": "VICENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "21/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "95101640241",
+        "nome": "PIERPAOLO",
+        "cognome": "VISSA'",
+        "data_nascita": "10/10/1978",
+        "provincia": "VI",
+        "comune": "VICENZA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "21/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "90093450568": {
+    "data_controllo": "2025-05-09 08:50:52",
+    "codice_fiscale": "90093450568",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI VITERBO APS",
+      "comune": "VITERBO",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI COMITATO PROVINCIALE DI VITERBO APS",
+      "repertorio": "112965",
+      "codice_fiscale": "90093450568",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "UNIONESPORTIVAACLIAPSVITERBO@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "VT",
+      "comune": "VITERBO",
+      "indirizzo": "VIA A. VOLTA",
+      "civico": "1/A",
+      "cap": "01100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90093450568",
+        "nome": "PIETRO",
+        "cognome": "CIPRIANI",
+        "data_nascita": "17/02/1952",
+        "provincia": "VT",
+        "comune": "VITERBO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90093450568",
+        "nome": "PIETRO",
+        "cognome": "CIPRIANI",
+        "data_nascita": "17/02/1952",
+        "provincia": "VT",
+        "comune": "VITERBO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90093450568",
+        "nome": "PIETRO",
+        "cognome": "CIPRIANI",
+        "data_nascita": "17/02/1952",
+        "provincia": "VT",
+        "comune": "VITERBO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90093450568",
+        "nome": "PIETRO",
+        "cognome": "CIPRIANI",
+        "data_nascita": "17/02/1952",
+        "provincia": "VT",
+        "comune": "VITERBO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90093450568",
+        "nome": "PIETRO",
+        "cognome": "CIPRIANI",
+        "data_nascita": "17/02/1952",
+        "provincia": "VT",
+        "comune": "VITERBO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90093450568",
+        "nome": "PIETRO",
+        "cognome": "CIPRIANI",
+        "data_nascita": "17/02/1952",
+        "provincia": "VT",
+        "comune": "VITERBO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90093450568",
+        "nome": "PIETRO",
+        "cognome": "CIPRIANI",
+        "data_nascita": "17/02/1952",
+        "provincia": "VT",
+        "comune": "VITERBO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "90093450568",
+        "nome": "PIETRO",
+        "cognome": "CIPRIANI",
+        "data_nascita": "17/02/1952",
+        "provincia": "VT",
+        "comune": "VITERBO",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "30/01/2021"
+      }
+    ],
     "documenti": []
   }
 }

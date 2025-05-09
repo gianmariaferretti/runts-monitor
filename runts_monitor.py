@@ -213,4 +213,211 @@ async def search_entity(page, codice_fiscale):
             logger.error(f"Errore nell'attesa della pagina di dettaglio: {e}")
             return entity_data
         
-        # Estrai tutti i dati dalla
+        # Estrai tutti i dati dalla pagina
+        content = await page.content()
+        soup = BeautifulSoup(content, "html.parser")
+        
+        # Dati generali dell'ente
+        try:
+            # Trova il titolo dell'ente
+            h1 = soup.find('h1')
+            h2 = soup.find('h2')
+            entity_data["dati_ente"]["denominazione"] = h1.get_text(strip=True) if h1 else (h2.get_text(strip=True) if h2 else None)
+            
+            # Altri dati dell'ente
+            entity_data["dati_ente"].update({
+                "repertorio": extract_text(soup, "Repertorio"),
+                "codice_fiscale": extract_text(soup, "Codice fiscale"),
+                "data_iscrizione": extract_text(soup, "Iscritto il"),
+                "data_iscrizione_sezione": extract_text(soup, "Iscritto nella sezione in data"),
+                "sezione": extract_text(soup, "Sezione"),
+                "forma_giuridica": extract_text(soup, "Forma Giuridica"),
+                "email_pec": extract_text(soup, "Email PEC"),
+                "ultimo_aggiornamento": extract_text(soup, "Ultimo aggiornamento statutario"),
+                "atto_costitutivo": extract_text(soup, "Atto costitutivo")
+            })
+            
+            # Rimuovi i valori None
+            entity_data["dati_ente"] = {k: v for k, v in entity_data["dati_ente"].items() if v is not None}
+            
+            # Sede legale
+            entity_data["sede_legale"] = {
+                "stato": extract_text(soup, "Stato"),
+                "provincia": extract_text(soup, "Provincia"),
+                "comune": extract_text(soup, "Comune"),
+                "indirizzo": extract_text(soup, "Indirizzo"),
+                "civico": extract_text(soup, "Civico"),
+                "cap": extract_text(soup, "CAP")
+            }
+            
+            # Rimuovi i valori None
+            entity_data["sede_legale"] = {k: v for k, v in entity_data["sede_legale"].items() if v is not None}
+            
+            # Estrai dati delle persone (fino a 10 persone)
+            for i in range(1, 11):
+                person_data = extract_person_data(soup, i)
+                if person_data:
+                    entity_data["persone"].append(person_data)
+            
+            # Estrai documenti
+            entity_data["documenti"] = extract_documents(soup)
+            
+        except Exception as e:
+            logger.error(f"Errore nell'estrazione dei dati dalla pagina di dettaglio: {e}")
+        
+        return entity_data
+        
+    except Exception as e:
+        logger.error(f"Errore generale durante la ricerca dell'ente {codice_fiscale}: {e}")
+        return entity_data
+
+def send_notification(changes):
+    """Invia una notifica email con le modifiche rilevate"""
+    config = load_config()
+    recipient_email = config["notifiche"]["email"]
+    
+    if not recipient_email:
+        logger.warning("Nessun indirizzo email configurato per le notifiche")
+        return
+    
+    # Crea il messaggio email
+    subject = f"RUNTS Monitor: Rilevate {len(changes)} modifiche"
+    
+    # Prepara il contenuto dell'email
+    email_content = "<h2>Modifiche rilevate nel monitoraggio RUNTS</h2>"
+    email_content += "<table border='1' cellpadding='5' cellspacing='0'>"
+    email_content += "<tr><th>Nome Ente</th><th>Codice Fiscale</th><th>Campo</th><th>Valore Precedente</th><th>Nuovo Valore</th></tr>"
+    
+    for change in changes:
+        email_content += f"<tr>"
+        email_content += f"<td>{change['nome']}</td>"
+        email_content += f"<td>{change['codice_fiscale']}</td>"
+        email_content += f"<td>{change['campo']}</td>"
+        email_content += f"<td>{change['valore_precedente']}</td>"
+        email_content += f"<td>{change['valore_nuovo']}</td>"
+        email_content += "</tr>"
+    
+    email_content += "</table>"
+    
+    # Usa GitHub Actions per creare un'issue e inviare l'email
+    notification_file = f"{DATA_DIR}/notification_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    with open(notification_file, 'w') as f:
+        json.dump({
+            "email": recipient_email,
+            "subject": subject,
+            "content": email_content,
+            "changes": changes
+        }, f, indent=2)
+    
+    logger.info(f"Notifica salvata in {notification_file} per l'elaborazione da parte di GitHub Actions")
+
+def flatten_dict(d, prefix=''):
+    """Appiattisce un dizionario nidificato in una singola dimensione"""
+    items = []
+    for k, v in d.items():
+        new_key = f"{prefix}.{k}" if prefix else k
+        if isinstance(v, dict):
+            items.extend(flatten_dict(v, new_key).items())
+        elif isinstance(v, list):
+            for i, item in enumerate(v):
+                if isinstance(item, dict):
+                    items.extend(flatten_dict(item, f"{new_key}[{i}]").items())
+                else:
+                    items.append((f"{new_key}[{i}]", item))
+        else:
+            items.append((new_key, v))
+    return dict(items)
+
+def compare_entities(old_data, new_data, codice_fiscale, nome_ente):
+    """Confronta i dati vecchi e nuovi di un ente e restituisce le modifiche"""
+    changes = []
+    
+    # Appiattisci i dizionari per confrontare facilmente anche i sottolivelli
+    flat_old = flatten_dict(old_data)
+    flat_new = flatten_dict(new_data)
+    
+    # Confronta i dati appiattiti
+    for key in set(flat_old.keys()) | set(flat_new.keys()):
+        # Salta la data di controllo
+        if key == 'data_controllo':
+            continue
+            
+        old_value = flat_old.get(key, "N/A")
+        new_value = flat_new.get(key, "N/A")
+        
+        if old_value != new_value:
+            changes.append({
+                "nome": nome_ente,
+                "codice_fiscale": codice_fiscale,
+                "campo": key,
+                "valore_precedente": old_value,
+                "valore_nuovo": new_value
+            })
+    
+    return changes
+
+async def process_entity(page, ente, history, all_changes):
+    """Processa un singolo ente"""
+    codice_fiscale = ente["numero_repertorio"]
+    nome = ente["nome"]
+    
+    # Ricerca i dati attuali
+    current_data = await search_entity(page, codice_fiscale)
+    
+    # Verifica se abbiamo già dati storici per questo ente
+    if codice_fiscale in history:
+        old_data = history[codice_fiscale]
+        
+        # Confronta i dati vecchi e nuovi
+        changes = compare_entities(old_data, current_data, codice_fiscale, nome)
+        if changes:
+            all_changes.extend(changes)
+            logger.info(f"Rilevate {len(changes)} modifiche per l'ente {nome} ({codice_fiscale})")
+    else:
+        logger.info(f"Prima rilevazione per l'ente {nome} ({codice_fiscale})")
+    
+    # Aggiorna lo storico
+    history[codice_fiscale] = current_data
+
+async def check_for_changes():
+    """Controlla se ci sono modifiche nei dati degli enti monitorati"""
+    config = load_config()
+    history = load_history()
+    all_changes = []
+    
+    async with async_playwright() as playwright:
+        # Usa un browser Chromium
+        browser = await playwright.chromium.launch(headless=True)
+        context = await browser.new_context()
+        page = await context.new_page()
+        
+        try:
+            for ente in config["enti"]:
+                await process_entity(page, ente, history, all_changes)
+                
+                # Piccola pausa per non sovraccaricare il server
+                await asyncio.sleep(2)
+        
+        finally:
+            await browser.close()
+        
+    # Salva lo storico aggiornato
+    save_history(history)
+    
+    # Se ci sono modifiche, invia una notifica
+    if all_changes:
+        logger.info(f"Rilevate {len(all_changes)} modifiche in totale")
+        send_notification(all_changes)
+    else:
+        logger.info("Nessuna modifica rilevata")
+    
+    return all_changes
+
+# Funzione principale
+def main():
+    logger.info("Avvio del monitoraggio RUNTS")
+    asyncio.run(check_for_changes())
+    logger.info("Monitoraggio completato")
+
+if __name__ == "__main__":
+    main()

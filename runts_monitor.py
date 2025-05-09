@@ -62,139 +62,60 @@ def extract_text(soup, label_text):
         return None
 
 def extract_person_data(soup, person_num):
-    """Estrae i dati di una persona specifica limitando la ricerca al suo contenitore"""
+    """Estrae i dati di una persona specifica"""
     try:
-        # Cerca esattamente la sezione "Persona X" (non parti di testo che contengono Persona X)
-        person_section = soup.find(lambda tag: tag.name and tag.text and tag.text.strip() == f"Persona {person_num}" or
-                                           tag.text.strip().startswith(f"Persona {person_num}"))
-        
-        if not person_section:
-            # Prova un approccio alternativo se non trova l'esatta corrispondenza
-            person_section = soup.find(string=lambda x: x and x.strip() == f"Persona {person_num}")
-        
+        # Cerca sezioni che contengono "Persona X"
+        person_section = soup.find(string=lambda x: x and f"Persona {person_num}" in x)
         if not person_section:
             return {}
 
-        # Trova il contenitore di questa persona - cerca il div padre più vicino
-        person_container = None
-        current = person_section
-        for _ in range(5):  # Limita la ricerca a 5 livelli verso l'alto
-            if current.parent and current.parent.name == 'div':
-                person_container = current.parent
-                break
-            current = current.parent
-        
-        if not person_container:
-            person_container = person_section.find_parent('div')
-        
+        # Trova il container della persona
+        person_container = person_section.find_parent('div')
         if not person_container:
             return {}
-        
-        # Estrai i dati solo da questo contenitore specifico
-        person_data = {"numero": str(person_num)}
-        
-        # Cerca all'interno del contenitore tutti i campi chiave-valore
-        fields_map = {
-            'tipo': ['Tipo'],
-            'rappresentante_legale': ['Rappresentante legale'],
-            'codice_fiscale': ['Codice fiscale'],
-            'nome': ['Nome'],
-            'cognome': ['Cognome'],
-            'data_nascita': ['Data di nascita'],
-            'provincia': ['Provincia'],
-            'comune': ['Comune'],
-            'carica': ['Carica'],
-            'data_nomina': ['Data nomina']
+
+        # Estrai i dati della persona
+        person_data = {
+            'tipo': extract_text(soup, 'Tipo'),
+            'rappresentante_legale': extract_text(soup, 'Rappresentante legale'),
+            'codice_fiscale': extract_text(soup, 'Codice fiscale'),
+            'nome': extract_text(soup, 'Nome'),
+            'cognome': extract_text(soup, 'Cognome'),
+            'data_nascita': extract_text(soup, 'Data di nascita'),
+            'provincia': extract_text(soup, 'Provincia'),
+            'comune': extract_text(soup, 'Comune'),
+            'carica': extract_text(soup, 'Carica'),
+            'data_nomina': extract_text(soup, 'Data nomina')
         }
         
-        # Per ogni coppia chiave-valore nel div della persona
-        labels = person_container.find_all(['strong', 'label', 'div', 'span'])
-        for label in labels:
-            label_text = label.text.strip()
-            for field, text_variants in fields_map.items():
-                if any(variant in label_text for variant in text_variants):
-                    # Trova il valore successivo a questa label
-                    next_sibling = label.next_sibling
-                    if next_sibling and isinstance(next_sibling, str) and next_sibling.strip():
-                        person_data[field] = next_sibling.strip()
-                    else:
-                        next_element = label.find_next_sibling()
-                        if next_element:
-                            person_data[field] = next_element.text.strip()
-        
-        return person_data
+        # Rimuovi i valori None
+        return {k: v for k, v in person_data.items() if v is not None}
     except Exception as e:
         logger.error(f"Errore nell'estrazione di Persona {person_num}: {e}")
         return {}
 
 def extract_documents(soup):
-    """Estrae l'elenco dei documenti con particolare attenzione ai bilanci"""
+    """Estrae l'elenco dei documenti"""
     documents = []
     try:
-        # Trova la sezione dei documenti
-        docs_section = soup.find(['h2', 'h3', 'h4', 'div'], string=lambda x: x and 'Atti e documenti' in x)
-        if not docs_section:
-            # Prova approcci alternativi
-            docs_section = soup.find(string=lambda x: x and 'Atti e documenti' in x)
-            if docs_section:
-                docs_section = docs_section.parent
-        
+        docs_section = soup.find('h2', string='Atti e documenti')
         if docs_section:
-            # Trova la tabella dei documenti
             table = docs_section.find_next('table')
             if table:
-                # Ottieni le intestazioni per identificare le colonne
-                headers = [th.text.strip().lower() for th in table.find_all('th')]
-                
-                # Mappa degli indici per varie colonne
-                col_index = {
-                    'documento': next((i for i, h in enumerate(headers) if 'documento' in h), 0),
-                    'codice': next((i for i, h in enumerate(headers) if 'codice' in h), 1),
-                    'data': next((i for i, h in enumerate(headers) if 'data' in h), 2),
-                    'allegato': next((i for i, h in enumerate(headers) if 'allegato' in h), 3)
-                }
-                
-                # Ottieni tutte le righe tranne l'intestazione
                 rows = table.find_all('tr')[1:]  # Salta l'intestazione
-                
                 for row in rows:
                     cells = row.find_all('td')
-                    if len(cells) >= 2:  # Assicurati che ci siano almeno documento e codice
-                        # Usa indici mappati ma fallback su posizioni fisse se necessario
-                        doc_type = cells[col_index['documento']].text.strip() if col_index['documento'] < len(cells) else ""
-                        code = cells[col_index['codice']].text.strip() if col_index['codice'] < len(cells) else ""
-                        
-                        # Per la data, cerca un anno nel testo o prendi il contenuto intero
-                        date_cell = cells[col_index['data']] if col_index['data'] < len(cells) else None
-                        date = ""
-                        if date_cell:
-                            date_text = date_cell.text.strip()
-                            # Cerca un anno in formato 20XX
-                            year_match = re.search(r'20\d{2}', date_text)
-                            date = year_match.group(0) if year_match else date_text
-                        
-                        # Determina se c'è un allegato (link o icona)
-                        has_attachment = "No"
-                        if col_index['allegato'] < len(cells):
-                            attachment_cell = cells[col_index['allegato']]
-                            if attachment_cell.find('a') or attachment_cell.find('img'):
-                                has_attachment = "Sì"
-                        
-                        document_data = {
-                            "tipo_documento": doc_type,
-                            "codice_pratica": code,
-                            "anno": date,
-                            "ha_allegato": has_attachment
+                    if len(cells) >= 3:
+                        doc = {
+                            'documento': cells[0].get_text(strip=True),
+                            'codice_pratica': cells[1].get_text(strip=True),
+                            'data': cells[2].get_text(strip=True),
+                            'allegato': 'Presente' if len(cells) > 3 and cells[3].find('a') else 'Non presente'
                         }
-                        documents.append(document_data)
-        
-        # Ordina i documenti per tipo e anno (i bilanci più recenti prima)
-        documents.sort(key=lambda x: (x["tipo_documento"] != "BILANCIO D'ESERCIZIO", 
-                                      -1 * int(x["anno"]) if x["anno"].isdigit() else 0))
-                        
+                        documents.append(doc)
     except Exception as e:
         logger.error(f"Errore nell'estrazione dei documenti: {e}")
-    
+        
     return documents
 
 async def search_entity(page, codice_fiscale):
@@ -405,24 +326,9 @@ async def search_entity(page, codice_fiscale):
                 entity_data["persone"].append(person_data)
                 logger.info(f"Estratti dati della persona {i}")
         
-        # Estrai documenti con focus sui bilanci
+        # Estrai documenti
         entity_data["documenti"] = extract_documents(soup)
         logger.info(f"Estratti {len(entity_data['documenti'])} documenti")
-        
-        # Estrai dati sui volontari e lavoratori
-        try:
-            volontari_section = soup.find(string=lambda x: x and 'Numero Dipendenti/Volontari' in x)
-            if volontari_section:
-                container = volontari_section.find_parent('div')
-                if container:
-                    entity_data["volontari"] = {
-                        "lavoratori": extract_text(soup, "N. lavoratori subordinati"),
-                        "volontari_iscritti": extract_text(soup, "N. volontari iscritti nel registro"),
-                        "volontari_enti_aderenti": extract_text(soup, "N. volontari enti aderenti")
-                    }
-                    logger.info("Estratti dati sui volontari e lavoratori")
-        except Exception as e:
-            logger.error(f"Errore nell'estrazione dei dati sui volontari: {e}")
         
         return entity_data
         
@@ -439,24 +345,137 @@ def send_notification(changes):
         logger.warning("Nessun indirizzo email configurato per le notifiche")
         return
     
-    # Crea il messaggio email
-    subject = f"RUNTS Monitor: Rilevate {len(changes)} modifiche"
-    
-    # Prepara il contenuto dell'email
-    email_content = "<h2>Modifiche rilevate nel monitoraggio RUNTS</h2>"
-    email_content += "<table border='1' cellpadding='5' cellspacing='0'>"
-    email_content += "<tr><th>Nome Ente</th><th>Codice Fiscale</th><th>Campo</th><th>Valore Precedente</th><th>Nuovo Valore</th></tr>"
+    # Raggruppa le modifiche per ente
+    changes_by_entity = {}
+    new_balances = {}
     
     for change in changes:
-        email_content += f"<tr>"
-        email_content += f"<td>{change['nome']}</td>"
-        email_content += f"<td>{change['codice_fiscale']}</td>"
-        email_content += f"<td>{change['campo']}</td>"
-        email_content += f"<td>{change['valore_precedente']}</td>"
-        email_content += f"<td>{change['valore_nuovo']}</td>"
-        email_content += "</tr>"
+        entity_key = f"{change['nome']} ({change['codice_fiscale']})"
+        if entity_key not in changes_by_entity:
+            changes_by_entity[entity_key] = []
+        
+        changes_by_entity[entity_key].append(change)
+        
+        # Identifica specificamente i nuovi bilanci
+        if change['campo'] == "Nuovo bilancio pubblicato":
+            if entity_key not in new_balances:
+                new_balances[entity_key] = []
+            new_balances[entity_key].append(change['valore_nuovo'])
     
-    email_content += "</table>"
+    # Conta il numero di entità con modifiche
+    num_entities = len(changes_by_entity)
+    
+    # Crea il messaggio email
+    subject = f"RUNTS Monitor: Modifiche rilevate per {num_entities} enti"
+    
+    # Prepara il contenuto dell'email
+    email_content = f"""
+    <html>
+    <head>
+        <style>
+            body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
+            .header {{ background-color: #0056b3; color: white; padding: 20px; text-align: center; }}
+            .summary {{ background-color: #f5f5f5; padding: 15px; margin: 15px 0; border-left: 4px solid #0056b3; }}
+            .entity {{ margin: 30px 0; }}
+            .entity-header {{ background-color: #e9ecef; padding: 10px; border-left: 4px solid #0056b3; }}
+            .new-balance {{ background-color: #d4edda; padding: 10px; margin: 10px 0; border-left: 4px solid #28a745; }}
+            table {{ border-collapse: collapse; width: 100%; margin: 20px 0; }}
+            th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+            th {{ background-color: #f2f2f2; }}
+            .footer {{ margin-top: 30px; font-size: 12px; color: #666; text-align: center; }}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Monitor RUNTS: Notifica Modifiche</h1>
+            <p>Data: {datetime.now().strftime("%d/%m/%Y %H:%M")}</p>
+        </div>
+        
+        <div class="summary">
+            <h2>Riepilogo</h2>
+            <p>Sono state rilevate modifiche per <strong>{num_entities}</strong> enti nel Registro Unico Nazionale del Terzo Settore.</p>
+    """
+    
+    # Aggiungi sezione nuovi bilanci se presenti
+    if new_balances:
+        email_content += """
+            <h3>Nuovi Bilanci Pubblicati:</h3>
+            <ul>
+        """
+        for entity, balances in new_balances.items():
+            for balance in balances:
+                email_content += f"<li><strong>{entity}</strong>: {balance}</li>"
+        email_content += "</ul>"
+    
+    email_content += "</div>"
+    
+    # Dettagli per ogni ente
+    for entity_name, entity_changes in changes_by_entity.items():
+        email_content += f"""
+        <div class="entity">
+            <div class="entity-header">
+                <h2>{entity_name}</h2>
+                <p>Numero di modifiche rilevate: {len(entity_changes)}</p>
+            </div>
+        """
+        
+        # Evidenzia i nuovi bilanci, se presenti
+        if entity_name in new_balances:
+            email_content += """
+            <div class="new-balance">
+                <h3>⚠️ NUOVI BILANCI PUBBLICATI</h3>
+                <ul>
+            """
+            for balance in new_balances[entity_name]:
+                email_content += f"<li><strong>{balance}</strong></li>"
+            email_content += """
+                </ul>
+            </div>
+            """
+        
+        # Tabella con le principali modifiche
+        email_content += """
+            <h3>Principali modifiche</h3>
+            <table>
+                <tr>
+                    <th>Campo</th>
+                    <th>Valore Precedente</th>
+                    <th>Nuovo Valore</th>
+                </tr>
+        """
+        
+        # Aggiungi le modifiche più significative (limitiamo a 15 per non appesantire troppo l'email)
+        important_changes = [c for c in entity_changes if 
+                            not c['campo'].startswith('documenti') and 
+                            not c['campo'].startswith('persone') and
+                            c['campo'] != "Nuovo bilancio pubblicato"]
+        
+        significant_changes = important_changes[:15]
+        
+        for change in significant_changes:
+            email_content += f"""
+                <tr>
+                    <td>{change['campo']}</td>
+                    <td>{change['valore_precedente']}</td>
+                    <td>{change['valore_nuovo']}</td>
+                </tr>
+            """
+        
+        email_content += """
+            </table>
+            <p><em>Nota: questa è una selezione delle modifiche più rilevanti. Per la lista completa, consultare l'issue su GitHub.</em></p>
+        </div>
+        """
+    
+    # Chiusura email
+    email_content += """
+        <div class="footer">
+            <p>Questa è una notifica automatica generata dal sistema di monitoraggio RUNTS.</p>
+            <p>Non rispondere a questa email.</p>
+        </div>
+    </body>
+    </html>
+    """
     
     # Usa GitHub Actions per creare un'issue e inviare l'email
     notification_file = f"{DATA_DIR}/notification_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
@@ -512,29 +531,6 @@ def compare_entities(old_data, new_data, codice_fiscale, nome_ente):
                 "valore_precedente": old_value,
                 "valore_nuovo": new_value
             })
-    
-    # Controllo speciale per nuovi bilanci
-    old_docs = old_data.get('documenti', [])
-    new_docs = new_data.get('documenti', [])
-    
-    # Estrai anni dei bilanci vecchi
-    old_balance_years = set()
-    for doc in old_docs:
-        if doc.get('tipo_documento') == "BILANCIO D'ESERCIZIO" and doc.get('anno', '').isdigit():
-            old_balance_years.add(doc.get('anno'))
-    
-    # Controlla nuovi bilanci
-    for doc in new_docs:
-        if doc.get('tipo_documento') == "BILANCIO D'ESERCIZIO" and doc.get('anno', '').isdigit():
-            year = doc.get('anno')
-            if year not in old_balance_years:
-                changes.append({
-                    "nome": nome_ente,
-                    "codice_fiscale": codice_fiscale,
-                    "campo": "Nuovo bilancio pubblicato",
-                    "valore_precedente": "Non presente",
-                    "valore_nuovo": f"Bilancio anno {year}"
-                })
     
     return changes
 

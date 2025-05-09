@@ -447,7 +447,7 @@ def send_notification(changes):
     <body>
         <div class="container">
             <div class="header">
-                <h1>Monitoraggio RUNTS: {num_bilanci_2024 > 0 ? "BILANCI 2024 PUBBLICATI" : "Nuovi documenti disponibili"}</h1>
+                <h1>Monitoraggio RUNTS: {"BILANCI 2024 PUBBLICATI" if num_bilanci_2024 > 0 else "Nuovi documenti disponibili"}</h1>
                 <div style="color: #e5e5e5; font-size: 14px;">{today}</div>
             </div>
             <div class="content">

@@ -1,1 +1,249 @@
-{}
+{
+  "93062320424": {
+    "data_controllo": "2025-05-09 07:57:31",
+    "codice_fiscale": "93062320424",
+    "dati_base": {
+      "denominazione": "UNIONE SPORTIVA ACLI ANCONA aps",
+      "comune": "ANCONA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "UNIONE SPORTIVA ACLI ANCONA aps",
+      "repertorio": "79444",
+      "codice_fiscale": "93062320424",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLIANCONA@PEC.IT",
+      "atto_costitutivo": "01/01/1990"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "AN",
+      "comune": "ANCONA",
+      "indirizzo": "VIA MONTEBELLO",
+      "civico": "69",
+      "cap": "60122"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93062320424",
+        "nome": "MARCO",
+        "cognome": "ZAGAGLIA",
+        "data_nascita": "09/11/1994",
+        "provincia": "AN",
+        "comune": "ANCONA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "23/01/2021"
+      }
+    ],
+    "documenti": []
+  },
+  "93111670662": {
+    "data_controllo": "2025-05-09 07:57:49",
+    "codice_fiscale": "93111670662",
+    "dati_base": {
+      "denominazione": "USACLI AQUILA APS",
+      "comune": "L'AQUILA",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE"
+    },
+    "dati_ente": {
+      "denominazione": "USACLI AQUILA APS",
+      "repertorio": "106353",
+      "codice_fiscale": "93111670662",
+      "sezione": "ASSOCIAZIONI DI PROMOZIONE SOCIALE",
+      "forma_giuridica": "ASSOCIAZIONE",
+      "email_pec": "USACLILAQUILA@PEC.IT",
+      "atto_costitutivo": "19/01/2022"
+    },
+    "sede_legale": {
+      "stato": "I",
+      "provincia": "AQ",
+      "comune": "L'AQUILA",
+      "indirizzo": "VIA LEONARDO DA VINCI,",
+      "civico": "10",
+      "cap": "67100"
+    },
+    "persone": [
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
+        "data_nascita": "04/07/1949",
+        "provincia": "AQ",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "19/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
+        "data_nascita": "04/07/1949",
+        "provincia": "AQ",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "19/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
+        "data_nascita": "04/07/1949",
+        "provincia": "AQ",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "19/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
+        "data_nascita": "04/07/1949",
+        "provincia": "AQ",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "19/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
+        "data_nascita": "04/07/1949",
+        "provincia": "AQ",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "19/01/2022"
+      },
+      {
+        "tipo": "Persona Fisica",
+        "rappresentante_legale": "S\u00ec",
+        "codice_fiscale": "93111670662",
+        "nome": "ENRICO",
+        "cognome": "MELONIO",
+        "data_nascita": "04/07/1949",
+        "provincia": "AQ",
+        "comune": "L'AQUILA",
+        "carica": "CaricaPRESIDENTE",
+        "data_nomina": "19/01/2022"
+      }
+    ],
+    "documenti": []
+  },
+  "92036200514": {
+    "data_controllo": "2025-05-09 07:58:06",
+    "codice_fiscale": "92036200514",
+    "dati_base": {},
+    "dati_ente": {},
+    "sede_legale": {},
+    "persone": [],
+    "documenti": []
+  }
+}

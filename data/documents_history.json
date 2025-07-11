@@ -1,12 +1,37 @@
 {
   "93062320424": {
-    "data_controllo": "2025-07-10 08:35:59",
+    "data_controllo": "2025-07-11 08:35:54",
     "codice_fiscale": "93062320424",
     "nome": "ANCONA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "93111670662": {
-    "data_controllo": "2025-07-10 08:37:03",
+    "data_controllo": "2025-07-11 08:36:13",
     "codice_fiscale": "93111670662",
     "nome": "AQUILA",
     "documenti": [
@@ -37,19 +62,44 @@
     ]
   },
   "92036200514": {
-    "data_controllo": "2025-07-10 08:37:38",
+    "data_controllo": "2025-07-11 08:36:30",
     "codice_fiscale": "92036200514",
     "nome": "AREZZO",
     "documenti": []
   },
   "92042840055": {
-    "data_controllo": "2025-07-10 08:37:50",
+    "data_controllo": "2025-07-11 08:36:42",
     "codice_fiscale": "92042840055",
     "nome": "ASTI",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92020480627": {
-    "data_controllo": "2025-07-10 08:38:21",
+    "data_controllo": "2025-07-11 08:36:59",
     "codice_fiscale": "92020480627",
     "nome": "BENEVENTO",
     "documenti": [
@@ -74,55 +124,237 @@
     ]
   },
   "95186450169": {
-    "data_controllo": "2025-07-10 08:38:38",
+    "data_controllo": "2025-07-11 08:37:15",
     "codice_fiscale": "95186450169",
     "nome": "BERGAMO",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "90057120025": {
-    "data_controllo": "2025-07-10 08:39:09",
+    "data_controllo": "2025-07-11 08:37:32",
     "codice_fiscale": "90057120025",
     "nome": "BIELLA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92017850378": {
-    "data_controllo": "2025-07-10 08:40:14",
+    "data_controllo": "2025-07-11 08:37:49",
     "codice_fiscale": "92017850378",
     "nome": "BOLOGNA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DICHIARAZIONE",
+        "codice_pratica": "D00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "98007270782": {
-    "data_controllo": "2025-07-10 08:41:51",
+    "data_controllo": "2025-07-11 08:38:05",
     "codice_fiscale": "98007270782",
     "nome": "CALABRIA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
+        "codice_pratica": "R21",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "93037790875": {
-    "data_controllo": "2025-07-10 08:43:13",
+    "data_controllo": "2025-07-11 08:38:22",
     "codice_fiscale": "93037790875",
     "nome": "CATANIA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "97015130798": {
-    "data_controllo": "2025-07-10 08:45:05",
+    "data_controllo": "2025-07-11 08:38:38",
     "codice_fiscale": "97015130798",
     "nome": "CATANZARO",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
+        "codice_pratica": "R21",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "94177950485": {
-    "data_controllo": "2025-07-10 08:47:22",
+    "data_controllo": "2025-07-11 08:38:55",
     "codice_fiscale": "94177950485",
     "nome": "FIRENZE",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "95068380104": {
-    "data_controllo": "2025-07-10 08:48:42",
+    "data_controllo": "2025-07-11 08:39:11",
     "codice_fiscale": "95068380104",
     "nome": "GENOVA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DICHIARAZIONE",
+        "codice_pratica": "D00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "VERBALE",
+        "codice_pratica": "V00",
+        "anno": "2022",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "91000430594": {
-    "data_controllo": "2025-07-10 08:49:45",
+    "data_controllo": "2025-07-11 08:39:28",
     "codice_fiscale": "91000430594",
     "nome": "LATINA",
     "documenti": [
@@ -165,13 +397,32 @@
     ]
   },
   "93012430752": {
-    "data_controllo": "2025-07-10 08:50:02",
+    "data_controllo": "2025-07-11 08:39:44",
     "codice_fiscale": "93012430752",
     "nome": "LECCE",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92531620158": {
-    "data_controllo": "2025-07-10 08:50:49",
+    "data_controllo": "2025-07-11 08:40:01",
     "codice_fiscale": "92531620158",
     "nome": "LODI",
     "documenti": [
@@ -202,7 +453,7 @@
     ]
   },
   "80013980463": {
-    "data_controllo": "2025-07-10 08:51:07",
+    "data_controllo": "2025-07-11 08:40:18",
     "codice_fiscale": "80013980463",
     "nome": "LUCCA",
     "documenti": [
@@ -221,25 +472,56 @@
     ]
   },
   "1424190435": {
-    "data_controllo": "2025-07-10 08:51:41",
+    "data_controllo": "2025-07-11 08:40:34",
     "codice_fiscale": "1424190435",
     "nome": "MACERATA",
     "documenti": []
   },
   "3103400366": {
-    "data_controllo": "2025-07-10 08:51:52",
+    "data_controllo": "2025-07-11 08:40:45",
     "codice_fiscale": "3103400366",
     "nome": "MODENA",
     "documenti": []
   },
   "80008130546": {
-    "data_controllo": "2025-07-10 08:52:04",
+    "data_controllo": "2025-07-11 08:40:57",
     "codice_fiscale": "80008130546",
     "nome": "PERUGIA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
+        "codice_pratica": "R21",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTESTAZIONE / AUTORIZZAZIONE DELL'AUTORITA' RELIGIOSA COMPETENTE",
+        "codice_pratica": "A00",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "91033340331": {
-    "data_controllo": "2025-07-10 08:52:35",
+    "data_controllo": "2025-07-11 08:41:14",
     "codice_fiscale": "91033340331",
     "nome": "PIACENZA",
     "documenti": [
@@ -276,19 +558,75 @@
     ]
   },
   "97509140014": {
-    "data_controllo": "2025-07-10 08:52:53",
+    "data_controllo": "2025-07-11 08:41:31",
     "codice_fiscale": "97509140014",
     "nome": "PIEMONTE",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "91173280354": {
-    "data_controllo": "2025-07-10 08:53:41",
+    "data_controllo": "2025-07-11 08:41:48",
     "codice_fiscale": "91173280354",
     "nome": "REGGIO EMILIA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "DICHIARAZIONE",
+        "codice_pratica": "D00",
+        "anno": "2023",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92041680908": {
-    "data_controllo": "2025-07-10 08:55:58",
+    "data_controllo": "2025-07-11 08:42:05",
     "codice_fiscale": "92041680908",
     "nome": "SASSARI",
     "documenti": [
@@ -313,13 +651,38 @@
     ]
   },
   "97194070823": {
-    "data_controllo": "2025-07-10 08:56:15",
+    "data_controllo": "2025-07-11 08:42:21",
     "codice_fiscale": "97194070823",
     "nome": "SICILIA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "92075490521": {
-    "data_controllo": "2025-07-10 08:57:02",
+    "data_controllo": "2025-07-11 08:42:38",
     "codice_fiscale": "92075490521",
     "nome": "SIENA",
     "documenti": [
@@ -338,7 +701,7 @@
     ]
   },
   "93035600894": {
-    "data_controllo": "2025-07-10 08:57:20",
+    "data_controllo": "2025-07-11 08:42:55",
     "codice_fiscale": "93035600894",
     "nome": "SIRACUSA",
     "documenti": [
@@ -357,25 +720,50 @@
     ]
   },
   "80029110261": {
-    "data_controllo": "2025-07-10 08:57:54",
+    "data_controllo": "2025-07-11 08:43:11",
     "codice_fiscale": "80029110261",
     "nome": "TREVISO",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "94033170302": {
-    "data_controllo": "2025-07-10 08:58:57",
+    "data_controllo": "2025-07-11 08:43:28",
     "codice_fiscale": "94033170302",
     "nome": "UDINE",
     "documenti": []
   },
   "2707951204": {
-    "data_controllo": "2025-07-10 08:59:13",
+    "data_controllo": "2025-07-11 08:43:39",
     "codice_fiscale": "2707951204",
     "nome": "US ACLI EMILIA ROMAGNA",
     "documenti": []
   },
   "95032770125": {
-    "data_controllo": "2025-07-10 08:59:42",
+    "data_controllo": "2025-07-11 08:43:51",
     "codice_fiscale": "95032770125",
     "nome": "VARESE",
     "documenti": [
@@ -400,7 +788,7 @@
     ]
   },
   "94005260271": {
-    "data_controllo": "2025-07-10 08:59:59",
+    "data_controllo": "2025-07-11 08:44:08",
     "codice_fiscale": "94005260271",
     "nome": "VENEZIA",
     "documenti": [
@@ -431,7 +819,7 @@
     ]
   },
   "94014660024": {
-    "data_controllo": "2025-07-10 09:00:16",
+    "data_controllo": "2025-07-11 08:44:24",
     "codice_fiscale": "94014660024",
     "nome": "VERCELLI",
     "documenti": [
@@ -462,13 +850,38 @@
     ]
   },
   "95101640241": {
-    "data_controllo": "2025-07-10 09:00:33",
+    "data_controllo": "2025-07-11 08:44:41",
     "codice_fiscale": "95101640241",
     "nome": "VICENZA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2024",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "90093450568": {
-    "data_controllo": "2025-07-10 09:02:10",
+    "data_controllo": "2025-07-11 08:44:58",
     "codice_fiscale": "90093450568",
     "nome": "VITERBO",
     "documenti": [

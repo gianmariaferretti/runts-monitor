@@ -1,43 +1,12 @@
 {
   "93062320424": {
-    "data_controllo": "2026-04-17 09:26:06",
+    "data_controllo": "2026-04-18 09:00:23",
     "codice_fiscale": "93062320424",
     "nome": "ANCONA",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "93111670662": {
-    "data_controllo": "2026-04-17 09:26:25",
+    "data_controllo": "2026-04-18 09:02:05",
     "codice_fiscale": "93111670662",
     "nome": "AQUILA",
     "documenti": [
@@ -74,75 +43,25 @@
     ]
   },
   "92036200514": {
-    "data_controllo": "2026-04-17 09:26:42",
+    "data_controllo": "2026-04-18 09:02:23",
     "codice_fiscale": "92036200514",
     "nome": "AREZZO",
     "documenti": []
   },
   "92042840055": {
-    "data_controllo": "2026-04-17 09:26:54",
+    "data_controllo": "2026-04-18 09:02:35",
     "codice_fiscale": "92042840055",
     "nome": "ASTI",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "92020480627": {
-    "data_controllo": "2026-04-17 09:27:11",
+    "data_controllo": "2026-04-18 09:03:12",
     "codice_fiscale": "92020480627",
     "nome": "BENEVENTO",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "95186450169": {
-    "data_controllo": "2026-04-17 09:27:27",
+    "data_controllo": "2026-04-18 09:04:13",
     "codice_fiscale": "95186450169",
     "nome": "BERGAMO",
     "documenti": [
@@ -173,44 +92,13 @@
     ]
   },
   "90057120025": {
-    "data_controllo": "2026-04-17 09:27:44",
+    "data_controllo": "2026-04-18 09:04:30",
     "codice_fiscale": "90057120025",
     "nome": "BIELLA",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "92017850378": {
-    "data_controllo": "2026-04-17 09:28:01",
+    "data_controllo": "2026-04-18 09:06:10",
     "codice_fiscale": "92017850378",
     "nome": "BOLOGNA",
     "documenti": [
@@ -253,13 +141,13 @@
     ]
   },
   "98007270782": {
-    "data_controllo": "2026-04-17 09:28:17",
+    "data_controllo": "2026-04-18 09:06:28",
     "codice_fiscale": "98007270782",
     "nome": "CALABRIA",
     "documenti": []
   },
   "93037790875": {
-    "data_controllo": "2026-04-17 09:28:29",
+    "data_controllo": "2026-04-18 09:07:07",
     "codice_fiscale": "93037790875",
     "nome": "CATANIA",
     "documenti": [
@@ -284,69 +172,19 @@
     ]
   },
   "97015130798": {
-    "data_controllo": "2026-04-17 09:28:46",
+    "data_controllo": "2026-04-18 09:07:24",
     "codice_fiscale": "97015130798",
     "nome": "CATANZARO",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2021",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
-        "codice_pratica": "R21",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "94177950485": {
-    "data_controllo": "2026-04-17 09:29:03",
+    "data_controllo": "2026-04-18 09:08:24",
     "codice_fiscale": "94177950485",
     "nome": "FIRENZE",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "95068380104": {
-    "data_controllo": "2026-04-17 09:29:20",
+    "data_controllo": "2026-04-18 09:09:24",
     "codice_fiscale": "95068380104",
     "nome": "GENOVA",
     "documenti": [
@@ -389,7 +227,7 @@
     ]
   },
   "91000430594": {
-    "data_controllo": "2026-04-17 09:29:37",
+    "data_controllo": "2026-04-18 09:09:41",
     "codice_fiscale": "91000430594",
     "nome": "LATINA",
     "documenti": [
@@ -438,32 +276,13 @@
     ]
   },
   "93012430752": {
-    "data_controllo": "2026-04-17 09:29:54",
+    "data_controllo": "2026-04-18 09:09:59",
     "codice_fiscale": "93012430752",
     "nome": "LECCE",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "92531620158": {
-    "data_controllo": "2026-04-17 09:30:11",
+    "data_controllo": "2026-04-18 09:11:00",
     "codice_fiscale": "92531620158",
     "nome": "LODI",
     "documenti": [
@@ -494,7 +313,7 @@
     ]
   },
   "80013980463": {
-    "data_controllo": "2026-04-17 09:30:28",
+    "data_controllo": "2026-04-18 09:11:17",
     "codice_fiscale": "80013980463",
     "nome": "LUCCA",
     "documenti": [
@@ -519,68 +338,25 @@
     ]
   },
   "1424190435": {
-    "data_controllo": "2026-04-17 09:30:45",
+    "data_controllo": "2026-04-18 09:11:35",
     "codice_fiscale": "1424190435",
     "nome": "MACERATA",
     "documenti": []
   },
   "3103400366": {
-    "data_controllo": "2026-04-17 09:30:57",
+    "data_controllo": "2026-04-18 09:11:47",
     "codice_fiscale": "3103400366",
     "nome": "MODENA",
     "documenti": []
   },
   "80008130546": {
-    "data_controllo": "2026-04-17 09:31:09",
+    "data_controllo": "2026-04-18 09:12:00",
     "codice_fiscale": "80008130546",
     "nome": "PERUGIA",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI VARIAZIONE",
-        "codice_pratica": "PROVVAR",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "DOCUMENTAZIONE INSUSSISTENZA O IRRECUPERABILITA'",
-        "codice_pratica": "R21",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE / AUTORIZZAZIONE DELL'AUTORITA' RELIGIOSA COMPETENTE",
-        "codice_pratica": "A00",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "91033340331": {
-    "data_controllo": "2026-04-17 09:31:26",
+    "data_controllo": "2026-04-18 09:12:59",
     "codice_fiscale": "91033340331",
     "nome": "PIACENZA",
     "documenti": [
@@ -623,87 +399,19 @@
     ]
   },
   "97509140014": {
-    "data_controllo": "2026-04-17 09:31:42",
+    "data_controllo": "2026-04-18 09:13:16",
     "codice_fiscale": "97509140014",
     "nome": "PIEMONTE",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2023",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "91173280354": {
-    "data_controllo": "2026-04-17 09:31:59",
+    "data_controllo": "2026-04-18 09:14:17",
     "codice_fiscale": "91173280354",
     "nome": "REGGIO EMILIA",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "DICHIARAZIONE",
-        "codice_pratica": "D00",
-        "anno": "2023",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "92041680908": {
-    "data_controllo": "2026-04-17 09:32:16",
+    "data_controllo": "2026-04-18 09:15:14",
     "codice_fiscale": "92041680908",
     "nome": "SASSARI",
     "documenti": [
@@ -734,7 +442,7 @@
     ]
   },
   "97194070823": {
-    "data_controllo": "2026-04-17 09:32:34",
+    "data_controllo": "2026-04-18 09:15:31",
     "codice_fiscale": "97194070823",
     "nome": "SICILIA",
     "documenti": [
@@ -771,7 +479,7 @@
     ]
   },
   "92075490521": {
-    "data_controllo": "2026-04-17 09:32:52",
+    "data_controllo": "2026-04-18 09:15:49",
     "codice_fiscale": "92075490521",
     "nome": "SIENA",
     "documenti": [
@@ -790,112 +498,37 @@
     ]
   },
   "93035600894": {
-    "data_controllo": "2026-04-17 09:33:08",
+    "data_controllo": "2026-04-18 09:16:06",
     "codice_fiscale": "93035600894",
     "nome": "SIRACUSA",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "80029110261": {
-    "data_controllo": "2026-04-17 09:33:25",
+    "data_controllo": "2026-04-18 09:17:04",
     "codice_fiscale": "80029110261",
     "nome": "TREVISO",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "94033170302": {
-    "data_controllo": "2026-04-17 09:33:42",
+    "data_controllo": "2026-04-18 09:18:02",
     "codice_fiscale": "94033170302",
     "nome": "UDINE",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI CANCELLAZIONE",
-        "codice_pratica": "PROVCANC",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "2707951204": {
-    "data_controllo": "2026-04-17 09:33:59",
+    "data_controllo": "2026-04-18 09:19:00",
     "codice_fiscale": "2707951204",
     "nome": "US ACLI EMILIA ROMAGNA",
     "documenti": []
   },
   "95032770125": {
-    "data_controllo": "2026-04-17 09:34:11",
+    "data_controllo": "2026-04-18 09:19:13",
     "codice_fiscale": "95032770125",
     "nome": "VARESE",
     "documenti": []
   },
   "94005260271": {
-    "data_controllo": "2026-04-17 09:35:10",
+    "data_controllo": "2026-04-18 09:19:52",
     "codice_fiscale": "94005260271",
     "nome": "VENEZIA",
     "documenti": [
@@ -926,83 +559,21 @@
     ]
   },
   "94014660024": {
-    "data_controllo": "2026-04-17 09:35:28",
+    "data_controllo": "2026-04-18 09:20:11",
     "codice_fiscale": "94014660024",
     "nome": "VERCELLI",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
-        "codice_pratica": "ZZ1",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   },
   "95101640241": {
-    "data_controllo": "2026-04-17 09:35:44",
+    "data_controllo": "2026-04-18 09:21:08",
     "codice_fiscale": "95101640241",
     "nome": "VICENZA",
     "documenti": []
   },
   "90093450568": {
-    "data_controllo": "2026-04-17 09:36:44",
+    "data_controllo": "2026-04-18 09:22:06",
     "codice_fiscale": "90093450568",
     "nome": "VITERBO",
-    "documenti": [
-      {
-        "tipo_documento": "BILANCIO D'ESERCIZIO",
-        "codice_pratica": "B00",
-        "anno": "2024",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "STATUTO",
-        "codice_pratica": "C02",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "DICHIARAZIONE",
-        "codice_pratica": "D00",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
-        "codice_pratica": "PROVISC",
-        "anno": "",
-        "ha_allegato": "No"
-      },
-      {
-        "tipo_documento": "ATTO COSTITUTIVO",
-        "codice_pratica": "C01",
-        "anno": "",
-        "ha_allegato": "No"
-      }
-    ]
+    "documenti": []
   }
 }

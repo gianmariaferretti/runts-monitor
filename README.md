@@ -81,7 +81,7 @@ Per ogni esecuzione che rileva modifiche, viene creata un'issue GitHub contenent
 - Se un ente non viene trovato, verificare che il codice fiscale sia corretto in `config.json`
 
 ## Licenza
-Questo progetto è di proprietà privata e non può essere ridistribuito senza autorizzazione.
+Questo progetto è distribuito sotto licenza **MIT**. Sei libero di usarlo, modificarlo e distribuirlo, anche in progetti derivati, a condizione di mantenere il riferimento al copyright originale. Vedi il file [LICENSE](LICENSE) per il testo completo.
 
 ---
 

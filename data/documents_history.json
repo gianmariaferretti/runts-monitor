@@ -1,12 +1,43 @@
 {
   "93062320424": {
-    "data_controllo": "2026-08-14 09:13:50",
+    "data_controllo": "2026-08-15 08:37:31",
     "codice_fiscale": "93062320424",
     "nome": "ANCONA",
-    "documenti": []
+    "documenti": [
+      {
+        "tipo_documento": "BILANCIO D'ESERCIZIO",
+        "codice_pratica": "B00",
+        "anno": "2025",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTESTAZIONE AFFILIAZIONE AD ENTE ASSOCIATIVO",
+        "codice_pratica": "ZZ1",
+        "anno": "2025",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "STATUTO",
+        "codice_pratica": "C02",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "PROVVEDIMENTO DI ISCRIZIONE",
+        "codice_pratica": "PROVISC",
+        "anno": "",
+        "ha_allegato": "No"
+      },
+      {
+        "tipo_documento": "ATTO COSTITUTIVO",
+        "codice_pratica": "C01",
+        "anno": "",
+        "ha_allegato": "No"
+      }
+    ]
   },
   "93111670662": {
-    "data_controllo": "2026-08-14 09:31:22",
+    "data_controllo": "2026-08-15 08:37:50",
     "codice_fiscale": "93111670662",
     "nome": "AQUILA",
     "documenti": [
@@ -43,7 +74,7 @@
     ]
   },
   "92036200514": {
-    "data_controllo": "2026-08-14 09:31:40",
+    "data_controllo": "2026-08-15 08:38:06",
     "codice_fiscale": "92036200514",
     "nome": "AREZZO",
     "documenti": [
@@ -80,7 +111,7 @@
     ]
   },
   "92042840055": {
-    "data_controllo": "2026-08-14 09:31:57",
+    "data_controllo": "2026-08-15 08:38:22",
     "codice_fiscale": "92042840055",
     "nome": "ASTI",
     "documenti": [
@@ -111,7 +142,7 @@
     ]
   },
   "92020480627": {
-    "data_controllo": "2026-08-14 09:32:14",
+    "data_controllo": "2026-08-15 08:38:38",
     "codice_fiscale": "92020480627",
     "nome": "BENEVENTO",
     "documenti": [
@@ -142,7 +173,7 @@
     ]
   },
   "95186450169": {
-    "data_controllo": "2026-08-14 09:32:30",
+    "data_controllo": "2026-08-15 08:38:54",
     "codice_fiscale": "95186450169",
     "nome": "BERGAMO",
     "documenti": [
@@ -179,7 +210,7 @@
     ]
   },
   "90057120025": {
-    "data_controllo": "2026-08-14 09:32:47",
+    "data_controllo": "2026-08-15 08:39:10",
     "codice_fiscale": "90057120025",
     "nome": "BIELLA",
     "documenti": [
@@ -216,7 +247,7 @@
     ]
   },
   "92017850378": {
-    "data_controllo": "2026-08-14 09:33:03",
+    "data_controllo": "2026-08-15 08:39:27",
     "codice_fiscale": "92017850378",
     "nome": "BOLOGNA",
     "documenti": [
@@ -259,13 +290,13 @@
     ]
   },
   "98007270782": {
-    "data_controllo": "2026-08-14 09:33:20",
+    "data_controllo": "2026-08-15 08:39:43",
     "codice_fiscale": "98007270782",
     "nome": "CALABRIA",
     "documenti": []
   },
   "93037790875": {
-    "data_controllo": "2026-08-14 09:33:31",
+    "data_controllo": "2026-08-15 08:39:54",
     "codice_fiscale": "93037790875",
     "nome": "CATANIA",
     "documenti": [
@@ -290,7 +321,7 @@
     ]
   },
   "97015130798": {
-    "data_controllo": "2026-08-14 09:33:48",
+    "data_controllo": "2026-08-15 08:40:10",
     "codice_fiscale": "97015130798",
     "nome": "CATANZARO",
     "documenti": [
@@ -327,7 +358,7 @@
     ]
   },
   "94177950485": {
-    "data_controllo": "2026-08-14 09:34:05",
+    "data_controllo": "2026-08-15 08:40:26",
     "codice_fiscale": "94177950485",
     "nome": "FIRENZE",
     "documenti": [
@@ -352,7 +383,7 @@
     ]
   },
   "95068380104": {
-    "data_controllo": "2026-08-14 09:34:22",
+    "data_controllo": "2026-08-15 08:40:43",
     "codice_fiscale": "95068380104",
     "nome": "GENOVA",
     "documenti": [
@@ -395,7 +426,7 @@
     ]
   },
   "91000430594": {
-    "data_controllo": "2026-08-14 09:34:38",
+    "data_controllo": "2026-08-15 08:40:59",
     "codice_fiscale": "91000430594",
     "nome": "LATINA",
     "documenti": [
@@ -444,7 +475,7 @@
     ]
   },
   "93012430752": {
-    "data_controllo": "2026-08-14 09:34:55",
+    "data_controllo": "2026-08-15 08:41:15",
     "codice_fiscale": "93012430752",
     "nome": "LECCE",
     "documenti": [
@@ -481,7 +512,7 @@
     ]
   },
   "92531620158": {
-    "data_controllo": "2026-08-14 09:35:11",
+    "data_controllo": "2026-08-15 08:41:31",
     "codice_fiscale": "92531620158",
     "nome": "LODI",
     "documenti": [
@@ -518,7 +549,7 @@
     ]
   },
   "80013980463": {
-    "data_controllo": "2026-08-14 09:35:28",
+    "data_controllo": "2026-08-15 08:41:47",
     "codice_fiscale": "80013980463",
     "nome": "LUCCA",
     "documenti": [
@@ -543,19 +574,19 @@
     ]
   },
   "1424190435": {
-    "data_controllo": "2026-08-14 09:35:44",
+    "data_controllo": "2026-08-15 08:42:04",
     "codice_fiscale": "1424190435",
     "nome": "MACERATA",
     "documenti": []
   },
   "3103400366": {
-    "data_controllo": "2026-08-14 09:35:55",
+    "data_controllo": "2026-08-15 08:42:15",
     "codice_fiscale": "3103400366",
     "nome": "MODENA",
     "documenti": []
   },
   "80008130546": {
-    "data_controllo": "2026-08-14 09:36:07",
+    "data_controllo": "2026-08-15 08:42:26",
     "codice_fiscale": "80008130546",
     "nome": "PERUGIA",
     "documenti": [
@@ -604,7 +635,7 @@
     ]
   },
   "91033340331": {
-    "data_controllo": "2026-08-14 09:36:23",
+    "data_controllo": "2026-08-15 08:42:42",
     "codice_fiscale": "91033340331",
     "nome": "PIACENZA",
     "documenti": [
@@ -641,7 +672,7 @@
     ]
   },
   "97509140014": {
-    "data_controllo": "2026-08-14 09:36:40",
+    "data_controllo": "2026-08-15 08:42:58",
     "codice_fiscale": "97509140014",
     "nome": "PIEMONTE",
     "documenti": [
@@ -678,7 +709,7 @@
     ]
   },
   "91173280354": {
-    "data_controllo": "2026-08-14 09:36:56",
+    "data_controllo": "2026-08-15 08:43:14",
     "codice_fiscale": "91173280354",
     "nome": "REGGIO EMILIA",
     "documenti": [
@@ -721,7 +752,7 @@
     ]
   },
   "92041680908": {
-    "data_controllo": "2026-08-14 09:37:13",
+    "data_controllo": "2026-08-15 08:43:30",
     "codice_fiscale": "92041680908",
     "nome": "SASSARI",
     "documenti": [
@@ -752,7 +783,7 @@
     ]
   },
   "97194070823": {
-    "data_controllo": "2026-08-14 09:37:29",
+    "data_controllo": "2026-08-15 08:43:46",
     "codice_fiscale": "97194070823",
     "nome": "SICILIA",
     "documenti": [
@@ -789,7 +820,7 @@
     ]
   },
   "92075490521": {
-    "data_controllo": "2026-08-14 09:37:46",
+    "data_controllo": "2026-08-15 08:44:03",
     "codice_fiscale": "92075490521",
     "nome": "SIENA",
     "documenti": [
@@ -808,7 +839,7 @@
     ]
   },
   "93035600894": {
-    "data_controllo": "2026-08-14 09:38:03",
+    "data_controllo": "2026-08-15 08:44:19",
     "codice_fiscale": "93035600894",
     "nome": "SIRACUSA",
     "documenti": [
@@ -833,7 +864,7 @@
     ]
   },
   "80029110261": {
-    "data_controllo": "2026-08-14 09:38:19",
+    "data_controllo": "2026-08-15 08:44:35",
     "codice_fiscale": "80029110261",
     "nome": "TREVISO",
     "documenti": [
@@ -864,7 +895,7 @@
     ]
   },
   "94033170302": {
-    "data_controllo": "2026-08-14 09:38:36",
+    "data_controllo": "2026-08-15 08:44:51",
     "codice_fiscale": "94033170302",
     "nome": "UDINE",
     "documenti": [
@@ -907,13 +938,13 @@
     ]
   },
   "2707951204": {
-    "data_controllo": "2026-08-14 09:38:52",
+    "data_controllo": "2026-08-15 08:45:07",
     "codice_fiscale": "2707951204",
     "nome": "US ACLI EMILIA ROMAGNA",
     "documenti": []
   },
   "95032770125": {
-    "data_controllo": "2026-08-14 09:39:03",
+    "data_controllo": "2026-08-15 08:45:18",
     "codice_fiscale": "95032770125",
     "nome": "VARESE",
     "documenti": [
@@ -944,7 +975,7 @@
     ]
   },
   "94005260271": {
-    "data_controllo": "2026-08-14 09:39:20",
+    "data_controllo": "2026-08-15 08:45:34",
     "codice_fiscale": "94005260271",
     "nome": "VENEZIA",
     "documenti": [
@@ -975,7 +1006,7 @@
     ]
   },
   "94014660024": {
-    "data_controllo": "2026-08-14 09:39:36",
+    "data_controllo": "2026-08-15 08:45:51",
     "codice_fiscale": "94014660024",
     "nome": "VERCELLI",
     "documenti": [
@@ -1012,7 +1043,7 @@
     ]
   },
   "95101640241": {
-    "data_controllo": "2026-08-14 09:39:53",
+    "data_controllo": "2026-08-15 08:46:07",
     "codice_fiscale": "95101640241",
     "nome": "VICENZA",
     "documenti": [
@@ -1049,7 +1080,7 @@
     ]
   },
   "90093450568": {
-    "data_controllo": "2026-08-14 09:40:09",
+    "data_controllo": "2026-08-15 08:46:23",
     "codice_fiscale": "90093450568",
     "nome": "VITERBO",
     "documenti": [
